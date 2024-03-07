@@ -1,33 +1,33 @@
-import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Cta from '../Cta';
-import FunFact from '../FunFact';
-import PageHeading from '../PageHeading';
-import Div from '../Div';
-import SectionHeading from '../SectionHeading';
-import TeamSlider from '../Slider/TeamSlider';
-import Spacing from '../Spacing';
+import React, { useEffect } from "react";
+import { pageTitle } from "../../helper";
+import Cta from "../Cta";
+import FunFact from "../FunFact";
+import PageHeading from "../PageHeading";
+import Div from "../Div";
+import SectionHeading from "../SectionHeading";
+import TeamSlider from "../Slider/TeamSlider";
+import Spacing from "../Spacing";
 const funfaceData = [
   {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
+    title: "Global Happy Clients",
+    factNumber: "40K",
   },
   {
-    title: 'Project Completed',
-    factNumber: '50K',
+    title: "Project Completed",
+    factNumber: "50K",
   },
   {
-    title: 'Team Members',
-    factNumber: '245',
+    title: "Team Members",
+    factNumber: "245",
   },
   {
-    title: 'Digital products',
-    factNumber: '550',
+    title: "Digital products",
+    factNumber: "550",
   },
 ];
 
 export default function AboutPage() {
-  pageTitle('About');
+  pageTitle("About");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -149,8 +149,8 @@ export default function AboutPage() {
       {/* End Why Choose Section */}
 
       {/* Start Team Section */}
-      <Spacing lg="145" md="80" />
-      <Div className="container">
+      {/* <Spacing lg="145" md="80" /> */}
+      {/* <Div className="container">
         <SectionHeading
           title="Awesome team <br/>members"
           subtitle="Our Team"
@@ -158,7 +158,7 @@ export default function AboutPage() {
         />
         <Spacing lg="85" md="45" />
         <TeamSlider />
-      </Div>
+      </Div> */}
       {/* End Team Section */}
 
       {/* Start CTA Section */}

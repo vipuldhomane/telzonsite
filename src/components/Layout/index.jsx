@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
-import CustomCursor from '../CustomCursor';
-import Footer from '../Footer';
-import Header from '../Header';
+import React, { useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import CustomCursor from "../CustomCursor";
+import Footer from "../Footer";
+import Header from "../Header";
 
 export default function Layout({ headerVariant }) {
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Layout({ headerVariant }) {
     <>
       <Header variant={headerVariant} />
       <Outlet />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Footer />
     </>
   );

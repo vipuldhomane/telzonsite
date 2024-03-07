@@ -1,144 +1,144 @@
-import React, { useEffect, useState } from 'react';
-import Hero4 from '../Hero/Hero4';
-import { pageTitle } from '../../helper';
-import Div from '../Div';
-import FunFact2 from '../FunFact/FunFact2';
-import Spacing from '../Spacing';
-import SectionHeading from '../SectionHeading';
-import MovingText2 from '../MovingText/MovingText2';
-import VideoModal from '../VideoModal';
-import Portfolio from '../Portfolio';
-import { Icon } from '@iconify/react';
-import TimelineSlider from '../Slider/TimelineSlider';
-import TestimonialSlider from '../Slider/TestimonialSlider';
-import Cta from '../Cta';
-import LogoList from '../LogoList';
-import PostList from '../Post/PostList';
+import React, { useEffect, useState } from "react";
+import Hero4 from "../Hero/Hero4";
+import { pageTitle } from "../../helper";
+import Div from "../Div";
+import FunFact2 from "../FunFact/FunFact2";
+import Spacing from "../Spacing";
+import SectionHeading from "../SectionHeading";
+import MovingText2 from "../MovingText/MovingText2";
+import VideoModal from "../VideoModal";
+import Portfolio from "../Portfolio";
+import { Icon } from "@iconify/react";
+import TimelineSlider from "../Slider/TimelineSlider";
+import TestimonialSlider from "../Slider/TestimonialSlider";
+import Cta from "../Cta";
+import LogoList from "../LogoList";
+import PostList from "../Post/PostList";
 const heroSocialLinks = [
   {
-    name: 'Behance',
-    links: '/',
+    name: "Behance",
+    links: "/",
   },
   {
-    name: 'Twitter',
-    links: '/',
+    name: "Twitter",
+    links: "/",
   },
 ];
 const funfaceData = [
   {
-    title: 'Digital products',
-    factNumber: '550',
+    title: "Digital Transformations",
+    factNumber: "50",
   },
   {
-    title: 'Global happy clients',
-    factNumber: '40K',
+    title: "Global happy clients",
+    factNumber: "100+",
   },
   {
-    title: 'Project completed',
-    factNumber: '50k',
+    title: "Project completed",
+    factNumber: "300+",
   },
   {
-    title: 'Team members',
-    factNumber: '250',
+    title: "Team members",
+    factNumber: "250",
   },
 ];
 const serviceData1 = [
   {
-    title: 'UI/UX Design',
-    href: '/service/service-details',
+    title: "Web Development",
+    href: "/service/service-details",
   },
   {
-    title: 'Marketing',
-    href: '/service/service-details',
+    title: "Marketing",
+    href: "/service/service-details",
   },
   {
-    title: 'Branding',
-    href: '/service/service-details',
+    title: "Branding",
+    href: "/service/service-details",
   },
 ];
 const serviceData2 = [
   {
-    title: 'SEO',
-    href: '/service/service-details',
+    title: "SEO",
+    href: "/service/service-details",
   },
   {
-    title: 'App design',
-    href: '/service/service-details',
+    title: "Graphics",
+    href: "/service/service-details",
   },
   {
-    title: 'React Developer',
-    href: '/service/service-details',
+    title: "Photography",
+    href: "/service/service-details",
   },
 ];
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_11.jpeg',
-    category: 'ui_ux_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_11.jpeg",
+    category: "ui_ux_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_12.jpeg',
-    category: 'logo_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_12.jpeg",
+    category: "logo_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_13.jpeg',
-    category: 'web_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_13.jpeg",
+    category: "web_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_14.jpeg',
-    category: 'mobile_apps',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_14.jpeg",
+    category: "mobile_apps",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_15.jpeg',
-    category: 'ui_ux_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_15.jpeg",
+    category: "ui_ux_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_16.jpeg',
-    category: 'web_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_16.jpeg",
+    category: "web_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_11.jpeg',
-    category: 'ui_ux_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_11.jpeg",
+    category: "ui_ux_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_12.jpeg',
-    category: 'logo_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_12.jpeg",
+    category: "logo_design",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_13.jpeg',
-    category: 'web_design',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_13.jpeg",
+    category: "web_design",
   },
 ];
 
 export default function DigitalAgencyHome() {
   const [itemShow, setItemShow] = useState(6);
-  pageTitle('Digital Agency');
+  pageTitle("Digital Agency");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -147,13 +147,13 @@ export default function DigitalAgencyHome() {
     <>
       {/* Start Hero Section */}
       <Hero4
-        title="We Are <span>A</span>rino <br />Digital Agency"
+        title="We Are <span>Tel</span>Zon <br />Digital Marketing Agency"
         subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
-        phoneNumber="+044 546664"
-        email="info@arino.com"
+        phoneNumber="+91 9898989898"
+        email="info@telzon.com"
       />
       {/* End Hero Section */}
 
@@ -194,7 +194,7 @@ export default function DigitalAgencyHome() {
           <Div className="row">
             <Div className="col-lg-5 col-xl-4">
               <SectionHeading
-                title="Uk’s best digital agency ever"
+                title="India’s best digital agency "
                 subtitle="Why Choose Us"
                 btnText="Learn More"
                 btnLink="/about"
@@ -229,8 +229,8 @@ export default function DigitalAgencyHome() {
             <Div
               className={`${
                 index === 0 || index === 3 || index === 4
-                  ? 'col-lg-8'
-                  : 'col-lg-4'
+                  ? "col-lg-8"
+                  : "col-lg-4"
               }`}
               key={index}
             >
@@ -248,7 +248,7 @@ export default function DigitalAgencyHome() {
 
         <Div className="text-center">
           {portfolioData.length <= itemShow ? (
-            ''
+            ""
           ) : (
             <>
               <Spacing lg="65" md="40" />
