@@ -46,13 +46,15 @@ export default function BlogPage() {
   pageTitle("Blog");
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [posts]);
+    // window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
+    window.scrollTo(0, 0);
     async function getBlogs() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       const res = await fetch(
-        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts"
+        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=5"
       );
 
       const data = await res.json();
@@ -96,7 +98,7 @@ export default function BlogPage() {
                   date={item.date}
                   category={item.category}
                   categoryHref={item.categoryHref}
-                  href={item.href}
+                  href={item.slug}
                 />
                 {/* {postData.length > index + 1 && <Spacing lg="95" md="60" />} */}
               </Div>

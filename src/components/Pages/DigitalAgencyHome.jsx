@@ -138,7 +138,7 @@ const portfolioData = [
 
 export default function DigitalAgencyHome() {
   const [itemShow, setItemShow] = useState(6);
-  pageTitle("Digital Agency");
+  pageTitle("TelZon Marketing");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

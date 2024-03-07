@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { pageTitle } from "../../helper";
 import Cta from "../Cta";
@@ -9,19 +9,57 @@ import Sidebar from "../Sidebar.jsx";
 import Spacing from "../Spacing";
 
 export default function BlogDetailsPage() {
-  const post = `<p><img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1isf4K.img?w=768&amp;h=512&amp;m=6" alt="Gold rate today in India on March 7, 2024: India is the largest importer of gold, which mainly caters to the demand of the jewellery industry. (Representative image)"></p><p><strong>Gold Rate Today In India:&nbsp;</strong>Gold prices on Tuesday surged Rs 800 to hit a fresh record high of Rs 65,000 per 10 grams in the national capital amid strong global trends. On March 7, 2024, gold rates in India experienced fluctuations. However, the fundamental price for 10 grams stayed close to Rs 65,000. A detailed examination revealed that the average price for 10 grams of 24-carat gold was approximately Rs 65,560, while 22-carat gold averaged around Rs 60,100.</p><p><br></p><p>At the same time, the silver market displayed an upward trend, reaching Rs 74,400 per kilogram.</p><p><strong>Gold rate today in India: Retail gold price on March 7</strong></p><p><strong>Gold Rate Today In Delhi</strong></p><p>As of March 7, 2024, in Delhi, the current price for 10 grams of 22-carat gold is approximately Rs 60,250, whereas 10 grams of 24-carat gold is priced at around Rs 65,710.</p><p><strong>Gold Rate Today In Mumbai</strong></p><p>Currently in Mumbai, the price of 10 grams of 22-carat gold stands at Rs 60,100, while the equivalent amount of 24-carat gold is valued at Rs 65,560.</p><p><strong>Gold Rate Today In Ahmedabad</strong></p><p>In Ahmedabad, the price for 10 grams of 22-carat gold is Rs 60,150, and for the same amount of 24-carat gold, it’s Rs 65,610.</p><p><strong><em>Check gold rates today in different cities on March 7, 2024; (In Rs/10 grams)</em></strong></p><p><strong>Multi Commodity Exchange</strong></p><p>On March 7, 2024, the Multi Commodity Exchange (MCX) saw active trading in gold futures contracts expiring on April 5, 2024. These contracts were priced at Rs 65,399 per 10 grams. Additionally, silver futures contracts expiring on May 3, 2024, were quoted at Rs 74,167 on the MCX.</p><p><img src="https://assets.msn.com/staticsb/statics/latest/icons-wc/icons/VideoBlue.svg">Related video:&nbsp;Gold Hits All Time High Of $2,152/oz; Prices Gain 19% In Last 1 Year &amp; 6% In Last 1 Month |CNBC TV18&nbsp;(CNBCTV18)</p><p><br></p><p><a href="https://www.msn.com/en-in/video/money/gold-hits-all-time-high-of-2152oz-prices-gain-19-in-last-1-year-6-in-last-1-month-cnbc-tv18/vi-BB1jsXrR?ocid=msedgntphdr" rel="noopener noreferrer" target="_blank" style="background-color: transparent;"><img src="https://assets.msn.com/staticsb/statics//latest/video-card-wc/icons/watch-more.svg" alt="View on Watch"></a></p><p><strong>Retail Cost of Gold</strong></p><p>The retail price of gold in India, often referred to as the gold rate, is the final cost per unit weight that customers pay when purchasing gold. This price is influenced by several factors beyond the inherent value of the metal itself.</p><p>Gold is highly important in India because of its cultural significance, its value for investment, and its traditional role in weddings and festivals.</p><p><strong>2024 Outlook</strong></p><p>As per the recent statement from the All India Gem and Jewellery Domestic Council (GJC), they anticipate that ongoing global economic uncertainties and geopolitical tensions will drive gold prices to reach a historic peak of Rs 70,000 per 10 grams in the coming year. This projection highlights gold’s role as a reliable investment and a valuable safeguard against inflation.</p>`;
+  const [post, setPost] = useState({});
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const params = useParams();
   pageTitle("Blog Details");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    async function getBlog() {
+      // const res = await fetch("http://localhost:5173/api/post/getPosts");
+      const res = await fetch(
+        `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?slug=${params.blogDetailsId}`
+      );
+
+      const data = await res.json();
+      // console.log(data.posts);
+      setPost(data.posts[0]);
+    }
+    getBlog();
+    // const createdAtDate = new Date(post.createdAt);
+    // const date = createdAtDate.toDateString();
+    // const time = createdAtDate.toTimeString().split(" ")[0];
+    // // console.log(post);
+    // setDate(date);
+    // setTime(time);
+  }, []);
+
+  function dateTime() {
+    const createdAtString = "2024-03-07T12:37:20.722+00:00";
+    const createdAtDate = new Date(createdAtString);
+
+    // Get the date
+    const date = createdAtDate.toDateString();
+
+    // Get the time
+    const time = createdAtDate.toTimeString().split(" ")[0];
+
+    console.log("Date:", date);
+    console.log("Time:", time);
+  }
   return (
     <>
       {/* Start Page Heading Section */}
+
       <PageHeading
-        title="Blog Single"
+        title={post.title}
         bgSrc="/images/blog_details_hero_bg.jpeg"
-        pageLinkText={params.blogDetailsId}
+        pageLinkText="Blogs"
       />
       {/* End Page Heading Section */}
 
@@ -174,7 +212,7 @@ export default function BlogDetailsPage() {
             <Div className="cs-post cs-style2">
               <div
                 className="p-3 max-w-2xl mx-auto w-full post-content"
-                dangerouslySetInnerHTML={{ __html: post }}
+                dangerouslySetInnerHTML={{ __html: post.content }}
               ></div>
             </Div>
             {/* End Details Post Content */}
