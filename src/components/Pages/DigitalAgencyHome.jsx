@@ -143,6 +143,18 @@ export default function DigitalAgencyHome() {
     window.scrollTo(0, 0);
   }, []);
 
+  // start the development server on render
+  useEffect(() => {
+    async function startServer() {
+      const res = await fetch(
+        "https://mern-blog-main-ds4m.onrender.com/api/user/test"
+      );
+      const data = await res.json();
+      console.log(data);
+    }
+    startServer();
+  }, []);
+
   return (
     <>
       {/* Start Hero Section */}
