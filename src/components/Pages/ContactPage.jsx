@@ -1,14 +1,14 @@
-import { Icon } from '@iconify/react';
-import React, { useEffect } from 'react';
-import { pageTitle } from '../../helper';
-import Div from '../Div';
-import PageHeading from '../PageHeading';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import ContactInfoWidget from '../Widget/ContactInfoWidget';
+import { Icon } from "@iconify/react";
+import React, { useEffect } from "react";
+import { pageTitle } from "../../helper";
+import Div from "../Div";
+import PageHeading from "../PageHeading";
+import SectionHeading from "../SectionHeading";
+import Spacing from "../Spacing";
+import ContactInfoWidget from "../Widget/ContactInfoWidget";
 
 export default function ContactPage() {
-  pageTitle('Contact Us');
+  pageTitle("Contact Us");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -31,7 +31,7 @@ export default function ContactPage() {
             <ContactInfoWidget withIcon />
             <Spacing lg="0" md="50" />
           </Div>
-          <Div className="col-lg-6">
+          {/* <Div className="col-lg-6">
             <form action="#" className="row">
               <Div className="col-sm-6">
                 <label className="cs-primary_color">Full Name*</label>
@@ -69,16 +69,26 @@ export default function ContactPage() {
                 </button>
               </Div>
             </form>
-          </Div>
+          </Div> */}
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
       <Div className="cs-google_map">
-        <iframe
+        {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
           allowFullScreen
           title="Google Map"
-        />
+        /> */}
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.719311254112!2d79.07871837438876!3d21.083870085885156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae7e7485eff0aeaf%3A0x98d7c5152355b89!2sTelzon%20-%20Best%20digital%20marketing%20agency!5e0!3m2!1sen!2sin!4v1710317235806!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style={{ border: 0 }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Map"
+        ></iframe>
       </Div>
       <Spacing lg="50" md="40" />
     </>

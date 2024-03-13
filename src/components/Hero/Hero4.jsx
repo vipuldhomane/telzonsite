@@ -1,7 +1,7 @@
-import React from 'react';
-import parse from 'html-react-parser';
-import Div from '../Div';
-import VerticalLinks from '../VerticalLinks';
+import React from "react";
+import parse from "html-react-parser";
+import Div from "../Div";
+import VerticalLinks from "../VerticalLinks";
 
 export default function Hero4({
   title,
@@ -15,13 +15,22 @@ export default function Hero4({
   return (
     <Div
       className="cs-hero cs-style1 cs-type1 text-center cs-fixed_bg"
-      style={{ backgroundImage: 'url(./images/hero_bg_2.jpeg)' }}
+      // style={{ backgroundImage: "url(./images/hero_bg_2.jpeg)" }}
+      style={{
+        backgroundImage:
+          "url(https://cdn.logojoy.com/wp-content/uploads/20220901112146/airbnb-brand-guidelines-1-2048x1152.gif)",
+        width: "100vw",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+
+        // height: "100vh",
+      }}
     >
       <Div className="container">
         <Div className="cs-hero_text">
-          <h1 className="cs-hero_title">{parse(title)}</h1>
+          {/* <h1 className="cs-hero_title">{parse(title)}</h1> */}
           <Div className="cs-hero_info justify-content-center">
-            <Div className="cs-hero_subtitle">{subtitle}</Div>
+            {/* <Div className="cs-hero_subtitle">{subtitle}</Div> */}
           </Div>
         </Div>
       </Div>
@@ -42,9 +51,9 @@ export default function Hero4({
           </ul>
         </Div>
       )}
-      <a href={scrollDownId} className="cs-down_btn">
+      {/* <a href={scrollDownId} className="cs-down_btn">
         .
-      </a>
+      </a> */}
     </Div>
   );
 }

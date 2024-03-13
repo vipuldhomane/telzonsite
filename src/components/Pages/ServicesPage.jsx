@@ -40,7 +40,7 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="UI/UX design"
-                    link="/service/ui-ux-design"
+                    // link="/service/ui-ux-design"
                     src="/images/service_1.jpeg"
                     alt="Service"
                   />
@@ -50,7 +50,7 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="React.js Development"
-                    link="/service/reactjs-development"
+                    // link="/service/reactjs-development"
                     src="/images/service_2.jpeg"
                     alt="Service"
                   />
@@ -59,7 +59,7 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Digital Marketing"
-                    link="/service/digital-marketing"
+                    // link="/service/digital-marketing"
                     src="/images/service_3.jpeg"
                     alt="Service"
                   />
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Technology"
-                    link="/service/technology"
+                    // link="/service/technology"
                     src="/images/service_4.jpeg"
                     alt="Service"
                   />
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Consultancy"
-                    link="/service/consultancy"
+                    // link="/service/consultancy"
                     src="/images/service_5.jpeg"
                     alt="Service"
                   />
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Creative Design"
-                    link="/service/creative-design"
+                    // link="/service/creative-design"
                     src="/images/service_6.jpeg"
                     alt="Service"
                   />
@@ -102,20 +102,20 @@ export default function ServicesPage() {
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
-      {/* <Div className="container">
+      <Div className="container">
         <SectionHeading
-          title='Providing best <br/>pricing for client' 
-          subtitle='Pricing & Packaging'
+          title="Providing best <br/>Services for client"
+          subtitle="Services Details"
         />
-        <Spacing lg='85' md='40'/>
-        <PricingTableList/>
-      </Div> */}
+        <Spacing lg="85" md="40" />
+        <PricingTableList />
+      </Div>
       <Spacing lg="125" md="55" />
-      <TestimonialSlider />
-      <Spacing lg="150" md="80" />
+      {/* <TestimonialSlider />
+      <Spacing lg="150" md="80" /> */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Let’s discuss & make <br />something <i>cool</i> together"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

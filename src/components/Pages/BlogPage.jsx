@@ -7,6 +7,7 @@ import PostStyle2 from "../Post/PostStyle2";
 import Div from "../Div";
 import Sidebar from "../Sidebar.jsx";
 import Spacing from "../Spacing";
+import SectionHeading from "../SectionHeading/index.jsx";
 
 const postData = [
   {
@@ -54,7 +55,7 @@ export default function BlogPage() {
     async function getBlogs() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       const res = await fetch(
-        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=5"
+        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=6?startIndex"
       );
 
       const data = await res.json();
@@ -66,15 +67,21 @@ export default function BlogPage() {
 
   return (
     <>
-      <PageHeading
+      {/* <PageHeading
         title="Our Blog"
         bgSrc="/images/blog_hero_bg.jpeg"
         pageLinkText="Blog"
-      />
+      /> */}
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
-          <Div className="col-lg-8">
+          <SectionHeading
+            title="Read The Latest Trends In The World Of Business!!"
+            subtitle="Latest Posts"
+            variant="cs-style1 text-center"
+          />
+          <Spacing lg="65" md="45" />
+          <Div className="posts_grid">
             {/* {postData.map((item, index) => (
               <Div key={index}>
                 <PostStyle2
@@ -95,7 +102,7 @@ export default function BlogPage() {
                   thumb={item.image}
                   title={item.title}
                   subtitle={item.subtitle}
-                  date={item.date}
+                  date={item.createdAt}
                   category={item.category}
                   categoryHref={item.categoryHref}
                   href={item.slug}
@@ -104,12 +111,14 @@ export default function BlogPage() {
               </Div>
             ))}
             <Spacing lg="60" md="40" />
-            <Pagination />
           </Div>
-          <Div className="col-xl-3 col-lg-4 offset-xl-1">
+          <Spacing lg="60" md="40" />
+          <Pagination />
+
+          {/* <Div className="col-xl-3 col-lg-4 offset-xl-1">
             <Spacing lg="0" md="80" />
             <Sidebar />
-          </Div>
+          </Div> */}
         </Div>
       </Div>
       <Spacing lg="150" md="80" />

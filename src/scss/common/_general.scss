@@ -6,7 +6,90 @@
     padding-right: 10px;
   }
 }
+// .testimonial-cont {
+//   width: 100%;
+//   display: grid;
+//   padding: 10px 20px;
 
+//   grid-column-gap: 10px;
+//   gap: 50px;
+//   justify-items: center; /* Center items horizontally */
+//   align-items: center; /* Center items vertically */
+//   grid-template-columns: repeat(2, 1fr); /* Initially two items per row */
+// }
+
+// /* Media query for mobile screens */
+// @media screen and (max-width: 768px) {
+//   .testimonial-cont {
+//     grid-template-columns: 1fr; /* Change to one item per row on mobile */
+//   }
+// }
+
+/* Optional: Style for iframes */
+.testimonial-cont iframe {
+  // width: 100%;
+  // height: auto;
+  border-radius: 1rem;
+  margin: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.testimonial-cont {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  row-gap: 10px;
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Desktop screens */
+@media screen and (min-width: 769px) {
+  .testimonial-cont {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 768px) {
+  .testimonial-cont {
+    grid-template-columns: 1fr; /* One item per row */
+  }
+
+  /* Adjust iframe width to fit screen */
+  .testimonial-cont iframe {
+    max-width: calc(100vw - 30px); /* Adjusted to fit screen size */
+    width: 100%;
+    height: auto;
+  }
+}
+.values-container {
+  display: grid;
+  width: 90%;
+  gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  // border: 1px solid red;
+  margin: auto;
+  padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .values-container {
+    grid-template-columns: repeat(1, 1fr); /* One item per row */
+    text-align: center;
+  }
+}
+.value-card {
+  padding: 1rem;
+  border: 2px solid rgba(97, 97, 97, 0.315);
+  border-radius: 2rem;
+  text-align: center;
+  // :hover {
+  //   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // }
+  h3: {
+    height: 30px;
+  }
+}
 .cs-light {
   font-weight: 300;
 }
@@ -211,7 +294,7 @@ hr {
     display: inline-block;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 2px;
       width: 100%;
@@ -282,7 +365,7 @@ hr {
   color: #fff;
   cursor: pointer;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -331,7 +414,7 @@ hr {
       margin-right: 21px;
       padding-right: 21px;
       &::after {
-        content: '';
+        content: "";
         height: 22px;
         width: 2px;
         background-color: #fff;
@@ -411,7 +494,7 @@ label {
       margin-right: 12px;
       padding-right: 12px;
       &::before {
-        content: '';
+        content: "";
         height: 20px;
         width: 2px;
         border-radius: 2px;
@@ -495,7 +578,7 @@ label {
   line-height: 2.8em;
 }
 .cs-parallax {
-  > *:not([class*='cs-shape_']) {
+  > *:not([class*="cs-shape_"]) {
     position: relative;
     z-index: 5;
   }
@@ -586,7 +669,7 @@ label {
 .cs-video_block_1_wrap {
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 50%;
     width: 100%;
@@ -604,7 +687,7 @@ label {
   overflow: hidden;
   border-radius: 20px;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 100%;
@@ -642,7 +725,7 @@ label {
 
 .cs-player_btn:before,
 .cs-player_btn:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -690,8 +773,8 @@ label {
   background-attachment: fixed;
 }
 
-.cs-parallax [class*='cs-to_'],
-.cs-parallax_bg [class*='cs-to_'] {
+.cs-parallax [class*="cs-to_"],
+.cs-parallax_bg [class*="cs-to_"] {
   transition: all 0.6s ease;
 }
 
@@ -964,7 +1047,7 @@ label {
   padding: 120px 0 50px;
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     right: -30px;
     top: -30px;
@@ -999,7 +1082,7 @@ label {
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  content: '';
+  content: "";
   height: 17px;
   width: 1px;
   background-color: $white;
@@ -1020,7 +1103,7 @@ label {
     position: relative;
     border-radius: 15px;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 100%;
       width: 100%;
@@ -1117,7 +1200,7 @@ label {
   position: relative;
   overflow: hidden;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -80%;
@@ -1302,7 +1385,7 @@ label {
     cursor: pointer;
     transition: all 0.3s ease;
     &::before {
-      content: '';
+      content: "";
       height: 9px;
       width: 9px;
       position: absolute;

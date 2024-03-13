@@ -14,6 +14,11 @@ import TestimonialSlider from "../Slider/TestimonialSlider";
 import Cta from "../Cta";
 import LogoList from "../LogoList";
 import PostList from "../Post/PostList";
+import Card from "../Card";
+import HomeServices from "./HomeServices";
+import { Link } from "react-router-dom";
+import ServiceList from "../ServiceList";
+import Timeline from "../Timeline";
 const heroSocialLinks = [
   {
     name: "Behance",
@@ -62,11 +67,11 @@ const serviceData2 = [
     href: "/service/service-details",
   },
   {
-    title: "Graphics",
+    title: "Creatives",
     href: "/service/service-details",
   },
   {
-    title: "Photography",
+    title: "Photo Videography",
     href: "/service/service-details",
   },
 ];
@@ -135,13 +140,45 @@ const portfolioData = [
     category: "web_design",
   },
 ];
+const timelineData = [
+  {
+    heading: "Digital Marketing",
+    name: "SubHeading",
+    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+  },
+  {
+    heading: "Customised Marketing",
+    name: "SubHeading",
+    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+  },
+  {
+    heading: "Creative Solutions",
+    name: "SubHeading",
+    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+  },
+  {
+    heading: "Business Strategy",
+    name: "SubHeading",
+    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+  },
+  {
+    heading: "Business Growth",
+    name: "SubHeading",
+    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+  },
+  {
+    heading: "Goal Oriented Strategy",
+    name: "SubHeading",
+    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+  },
+];
 
 export default function DigitalAgencyHome() {
   const [itemShow, setItemShow] = useState(6);
   pageTitle("TelZon Marketing");
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   // start the development server on render
   useEffect(() => {
@@ -170,26 +207,29 @@ export default function DigitalAgencyHome() {
       {/* End Hero Section */}
 
       {/* Start Funfact Section */}
-      <Div className="container">
+      {/* <Div className="container">
         <FunFact2
           data={funfaceData}
           variant="cs-type1"
           bgUrl="/images/funfact_shape_bg.svg"
         />
-      </Div>
+      </Div> */}
       {/* End Funfact Section */}
 
       {/* Start Services Section */}
+
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="What we provide"
+          title="Our core services"
           subtitle="Services"
           variant="cs-style1 text-center"
         />
-        <Spacing lg="65" md="45" />
+        <Spacing lg="70" md="45" />
+        <ServiceList />
       </Div>
-      {/* End Services Section */}
+
+      <Spacing lg="145" md="80" />
 
       {/* Start Moving Text Section */}
       <MovingText2 data={serviceData1} />
@@ -197,8 +237,19 @@ export default function DigitalAgencyHome() {
       <MovingText2 reverseDirection data={serviceData2} />
       {/* End Moving Text Section */}
 
+      <Spacing lg="120" md="50" />
+      <Div className="container">
+        <h2 className="cs-font_50 cs-m0 cs-line_height_4">
+          Our agile process is ability to adapt and respond to change. Agile
+          organizations view change as an opportunity, not a threat. (Some
+          catchy quote!!)
+        </h2>
+      </Div>
+      <Spacing lg="90" md="70" />
+      {/* End Services Section */}
+
       {/* Start About Section */}
-      <Div className="cs-shape_wrap_4">
+      {/* <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
         <Spacing lg="150" md="80" />
@@ -224,11 +275,11 @@ export default function DigitalAgencyHome() {
             </Div>
           </Div>
         </Div>
-      </Div>
+      </Div> */}
       {/* End About Section */}
 
       {/* Start Projects Section */}
-      <Spacing lg="145" md="80" />
+      {/* <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
           title="Portfolio to explore"
@@ -274,17 +325,38 @@ export default function DigitalAgencyHome() {
             </>
           )}
         </Div>
-      </Div>
+      </Div> */}
       {/* End Projects Section */}
 
       {/* Start Awards Section */}
-      <Spacing lg="140" md="80" />
+
+      {/* <Spacing lg="140" md="80" /> */}
       <Div className="container">
+        <SectionHeading
+          title="Why Choose Us"
+          subtitle="Our Values"
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="70" md="45" />
+        {/* <Div className=" col-xl-7 offset-xl-1"> */}
+        <Div className="values-container">
+          {timelineData.map((item, index) => (
+            <Div className="cs-time_line value-card" key={index}>
+              <h3 className="cs-accent_color">{item.heading}</h3>
+              <h5>{item.name}</h5>
+              <p>{item.desc}</p>
+              <p>{item.type}</p>
+            </Div>
+          ))}
+        </Div>
+      </Div>
+      {/* </Div> */}
+      {/* <Div className="container">
         <Div className="row">
           <Div className="col-xl-4">
             <SectionHeading
-              title="We get multiple awards"
-              subtitle="Our Awards"
+              title="Why Choose Us"
+              subtitle="Our Methodology"
               variant="cs-style1"
             />
             <Spacing lg="90" md="45" />
@@ -293,16 +365,64 @@ export default function DigitalAgencyHome() {
             <TimelineSlider />
           </Div>
         </Div>
-      </Div>
+      </Div> */}
       <Spacing lg="145" md="80" />
       {/* End Awards Section */}
 
       {/* Start Testimonial Section */}
-      <TestimonialSlider />
+      <div className="text-center">
+        <SectionHeading
+          className="text-center"
+          title="Watch Our Latest Videos!!"
+          subtitle="Video Gallery"
+        />
+        <Spacing lg="45" md="45" />
+      </div>
+      {/* <TestimonialSlider /> */}
+      <div className="testimonial-cont">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?si=Sy3CIbA3StnMcV29&amp;list=PLA_tb393dqDeOinVj1dMTpkguOTz8nv5y"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          cl
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?si=UVRuiU2SnAo9_9ik&amp;list=PLE0Jo6NF_JYOMvJNqn7jrWEwWn_WjZlKV"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?si=tHkzkmqfdEpqJnwp&amp;list=PLE0Jo6NF_JYPjGRiOfj44iQ-XGomdEYMk"
+          title="YouTube video player"
+          frameborder="1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?si=Sy3CIbA3StnMcV29&amp;list=PLA_tb393dqDeOinVj1dMTpkguOTz8nv5y"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          cl
+        ></iframe>
+      </div>
       {/* End Testimonial Section */}
 
       {/* Start Blog Section */}
-      <Div className="cs-shape_wrap_4">
+      {/* <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
         <Spacing lg="145" md="80" />
@@ -317,12 +437,13 @@ export default function DigitalAgencyHome() {
               />
               <Spacing lg="45" md="45" />
             </Div>
+            <Link to={"/blog"}>Read Latest Blogs</Link>
             <Div className="col-lg-7 offset-xl-1">
               <PostList />
             </Div>
           </Div>
         </Div>
-      </Div>
+      </Div> */}
       <Spacing lg="145" md="80" />
       {/* End Blog Section */}
 
@@ -342,8 +463,8 @@ export default function DigitalAgencyHome() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Let’s discuss & make <br />something <i>cool</i> together"
+          btnText="Call For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

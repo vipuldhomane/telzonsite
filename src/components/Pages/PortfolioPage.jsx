@@ -13,7 +13,7 @@ const portfolioData = [
     title: "Colorful Art Work",
     subtitle: "See Details",
     href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_4.jpeg",
+    src: "/images/portfolio_1.jpeg",
     category: "ui_ux_design",
   },
   {
@@ -55,7 +55,7 @@ const portfolioData = [
     title: "Colorful Art Work",
     subtitle: "See Details",
     href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_10.jpeg",
+    src: "/images/portfolio_6.jpeg",
     category: "logo_design",
   },
   {
@@ -110,16 +110,16 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <PageHeading
+      {/* <PageHeading
         title="Portfolio"
         bgSrc="images/portfolio_hero_bg.jpeg"
         pageLinkText="Portfolio"
-      />
+      /> */}
       <Spacing lg="145" md="80" />
       <Div className="container">
         <Div className="cs-portfolio_1_heading">
           <SectionHeading title="Some recent work" subtitle="Our Portfolio" />
-          <Div className="cs-filter_menu cs-style1">
+          {/* <Div className="cs-filter_menu cs-style1">
             <ul className="cs-mp0 cs-center">
               <li className={active === "all" ? "active" : ""}>
                 <span onClick={() => setActive("all")}>All</span>
@@ -135,7 +135,7 @@ export default function PortfolioPage() {
                 </li>
               ))}
             </ul>
-          </Div>
+          </Div> */}
         </Div>
         <Spacing lg="90" md="45" />
         <Div className="row">

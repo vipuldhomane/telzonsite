@@ -149,8 +149,8 @@ export default function AboutPage() {
       {/* End Why Choose Section */}
 
       {/* Start Team Section */}
-      {/* <Spacing lg="145" md="80" /> */}
-      {/* <Div className="container">
+      <Spacing lg="145" md="80" />
+      <Div className="container">
         <SectionHeading
           title="Awesome team <br/>members"
           subtitle="Our Team"
@@ -158,7 +158,7 @@ export default function AboutPage() {
         />
         <Spacing lg="85" md="45" />
         <TeamSlider />
-      </Div> */}
+      </Div>
       {/* End Team Section */}
 
       {/* Start CTA Section */}
