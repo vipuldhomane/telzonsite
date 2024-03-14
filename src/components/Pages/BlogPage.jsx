@@ -8,6 +8,8 @@ import Div from "../Div";
 import Sidebar from "../Sidebar.jsx";
 import Spacing from "../Spacing";
 import SectionHeading from "../SectionHeading/index.jsx";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 const postData = [
   {
@@ -44,6 +46,7 @@ const postData = [
 
 export default function BlogPage() {
   const [posts, setPosts] = useState([]);
+  const [pageNo, setPageNo] = useState(0);
   pageTitle("Blog");
 
   useEffect(() => {
@@ -51,20 +54,40 @@ export default function BlogPage() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     async function getBlogs() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
-      const res = await fetch(
-        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=6?startIndex"
-      );
+      let data;
+      if (pageNo !== 0) {
+        const res = await fetch(
+          `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?startIndex=${
+            pageNo * 6
+          }?limit=6?`
+        );
 
-      const data = await res.json();
+        data = await res.json();
+      } else {
+        const res = await fetch(
+          `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=6`
+        );
+
+        data = await res.json();
+      }
       console.log(data.posts);
       setPosts(data.posts);
     }
     getBlogs();
-  }, []);
+  }, [pageNo]);
 
+  function handlePageIncrease() {
+    if (pageNo * 6 < postData.length) setPageNo(pageNo + 1);
+    console.log(pageNo);
+  }
+  function handlePageReduce() {
+    console.log(postData.length);
+    if (pageNo > 0) setPageNo(pageNo - 1);
+    console.log(pageNo);
+  }
   return (
     <>
       {/* <PageHeading
@@ -82,20 +105,6 @@ export default function BlogPage() {
           />
           <Spacing lg="65" md="45" />
           <Div className="posts_grid">
-            {/* {postData.map((item, index) => (
-              <Div key={index}>
-                <PostStyle2
-                  thumb={item.thumb}
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  date={item.date}
-                  category={item.category}
-                  categoryHref={item.categoryHref}
-                  href={item.href}
-                />
-                {postData.length > index + 1 && <Spacing lg="95" md="60" />}
-              </Div>
-            ))} */}
             {posts.map((item, index) => (
               <Div key={index}>
                 <PostStyle2
@@ -113,7 +122,28 @@ export default function BlogPage() {
             <Spacing lg="60" md="40" />
           </Div>
           <Spacing lg="60" md="40" />
-          <Pagination />
+
+          {/* <Pagination /> */}
+          <ul className="cs-pagination_box cs-center cs-white_color cs-mp0 cs-semi_bold ">
+            <li>
+              <Link
+                onClick={handlePageReduce}
+                to="#"
+                className="cs-pagination_item cs-center"
+              >
+                <Icon icon="akar-icons:chevron-left" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={handlePageIncrease}
+                to="#"
+                className="cs-pagination_item cs-center"
+              >
+                <Icon icon="akar-icons:chevron-right" />
+              </Link>
+            </li>
+          </ul>
 
           {/* <Div className="col-xl-3 col-lg-4 offset-xl-1">
             <Spacing lg="0" md="80" />

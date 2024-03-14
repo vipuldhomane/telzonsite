@@ -7,9 +7,13 @@ import PageHeading from "../PageHeading";
 import Div from "../Div";
 import Sidebar from "../Sidebar.jsx";
 import Spacing from "../Spacing";
+import PostStyle2 from "../Post/PostStyle2.jsx";
+import SectionHeading from "../SectionHeading/index.jsx";
 
 export default function BlogDetailsPage() {
   const [post, setPost] = useState({});
+  const [relatedPost, setRelatedPost] = useState([]);
+
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const params = useParams();
@@ -19,7 +23,7 @@ export default function BlogDetailsPage() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     async function getBlog() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       const res = await fetch(
@@ -31,6 +35,20 @@ export default function BlogDetailsPage() {
       setPost(data.posts[0]);
     }
     getBlog();
+  }, []);
+
+  useEffect(() => {
+    async function getRelatedBlogs() {
+      // const res = await fetch("http://localhost:5173/api/post/getPosts");
+      const res = await fetch(
+        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=3"
+      );
+
+      const data = await res.json();
+      console.log(data.posts);
+      setRelatedPost(data.posts);
+    }
+    getRelatedBlogs();
   }, []);
 
   return (
@@ -64,7 +82,30 @@ export default function BlogDetailsPage() {
           <Spacing lg="150" md="80" />
         </>
       )}
-
+      <Div className="container">
+        <SectionHeading
+          title="Related Articles"
+          subtitle="Read Latest Articles"
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="70" md="45" />
+      </Div>
+      <Div className="posts_grid p-5" style={{ margin: "2rem" }}>
+        {relatedPost.map((item, index) => (
+          <Div key={index}>
+            <PostStyle2
+              thumb={item.image}
+              title={item.title}
+              subtitle={item.subtitle}
+              date={item.createdAt}
+              category={item.category}
+              categoryHref={item.categoryHref}
+              href={item.slug}
+            />
+            {/* {postData.length > index + 1 && <Spacing lg="95" md="60" />} */}
+          </Div>
+        ))}
+      </Div>
       {/* Start Blog Details */}
 
       {/* Start CTA Section */}
