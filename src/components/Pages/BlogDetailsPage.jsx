@@ -49,7 +49,7 @@ export default function BlogDetailsPage() {
           <Spacing lg="150" md="80" />
           <Div className="container">
             <Div className="row">
-              <Div className="col-lg-10 m-auto">
+              <Div className=" m-auto">
                 <Div className=" text-white cs-post cs-style2">
                   <div
                     className="p-3 max-w-2xl mx-auto w-full post-content"
