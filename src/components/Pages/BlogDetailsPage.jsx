@@ -90,7 +90,7 @@ export default function BlogDetailsPage() {
         />
         <Spacing lg="70" md="45" />
       </Div>
-      <Div className="posts_grid p-5" style={{ margin: "2rem" }}>
+      <Div className="posts_grid md:p-5 sm:p-2" style={{ margin: "0.5rem" }}>
         {relatedPost.map((item, index) => (
           <Div key={index}>
             <PostStyle2
