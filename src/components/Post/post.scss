@@ -17,11 +17,32 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.related_posts_grid {
+  display: grid;
+  gap: 10px;
+  // border: 2px solid rgba(43, 43, 43, 0.151);
+  border-radius: 2rem;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .cs-post {
   border: 2px solid rgba(68, 68, 68, 0.432);
   // margin: 10px;
   padding: 2rem 1rem;
 
+  border-radius: 2rem;
+  height: 100%;
+}
+.cs-blog-post {
+  // padding: 1.5rem 1rem;
   border-radius: 2rem;
   height: 100%;
 }

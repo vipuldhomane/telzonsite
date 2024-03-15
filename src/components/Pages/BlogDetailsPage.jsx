@@ -23,7 +23,7 @@ export default function BlogDetailsPage() {
   }, []);
 
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     async function getBlog() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       const res = await fetch(
@@ -58,17 +58,21 @@ export default function BlogDetailsPage() {
         <>
           <PageHeading
             title={post.title}
-            bgSrc="/images/blog_details_hero_bg.jpeg"
+            // bgSrc="/images/blog_details_hero_bg.jpeg"
+            bgSrc="/images/blog_details_hero_bg"
             pageLinkText={new Date(post.createdAt).toDateString()}
           />
           {/* End Page Heading Section */}
-
+          <Spacing lg="100" md="50" />
+          <Div>
+            <img src={post.image} alt={post.title} srcset="" />
+          </Div>
           {/* Start Blog Details */}
           <Spacing lg="150" md="80" />
           <Div className="container">
             <Div className="row">
               <Div className=" m-auto">
-                <Div className=" text-white cs-post cs-style2">
+                <Div className=" text-white  cs-blog-post cs-style2">
                   <div
                     className="p-3 max-w-2xl mx-auto w-full post-content"
                     dangerouslySetInnerHTML={{ __html: post.content }}
@@ -90,7 +94,7 @@ export default function BlogDetailsPage() {
         />
         <Spacing lg="70" md="45" />
       </Div>
-      <Div className="posts_grid md:p-5 sm:p-2" style={{ margin: "0.5rem" }}>
+      <Div className="related_posts_grid">
         {relatedPost.map((item, index) => (
           <Div key={index}>
             <PostStyle2

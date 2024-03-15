@@ -54,7 +54,7 @@ export default function BlogPage() {
   }, []);
 
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     async function getBlogs() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       let data;
