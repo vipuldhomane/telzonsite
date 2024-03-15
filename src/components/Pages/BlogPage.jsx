@@ -81,12 +81,12 @@ export default function BlogPage() {
 
   function handlePageIncrease() {
     if (pageNo * 6 < postData.length) setPageNo(pageNo + 1);
-    console.log(pageNo);
+    // console.log(pageNo);
   }
   function handlePageReduce() {
-    console.log(postData.length);
+    // console.log(postData.length);
     if (pageNo > 0) setPageNo(pageNo - 1);
-    console.log(pageNo);
+    // console.log(pageNo);
   }
   return (
     <>

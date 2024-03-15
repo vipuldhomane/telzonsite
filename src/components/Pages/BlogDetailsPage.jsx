@@ -9,6 +9,7 @@ import Sidebar from "../Sidebar.jsx";
 import Spacing from "../Spacing";
 import PostStyle2 from "../Post/PostStyle2.jsx";
 import SectionHeading from "../SectionHeading/index.jsx";
+import RelatedPostStyle from "../Post/relatedPostStyle.jsx";
 
 export default function BlogDetailsPage() {
   const [post, setPost] = useState({});
@@ -18,9 +19,9 @@ export default function BlogDetailsPage() {
   const [time, setTime] = useState("");
   const params = useParams();
   pageTitle("Blog Details");
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -56,22 +57,33 @@ export default function BlogDetailsPage() {
       {/* Start Page Heading Section */}
       {post && (
         <>
+          <Div style={{ marginTop: "2rem" }}></Div>
           <PageHeading
             title={post.title}
             // bgSrc="/images/blog_details_hero_bg.jpeg"
             bgSrc="/images/blog_details_hero_bg"
             pageLinkText={new Date(post.createdAt).toDateString()}
+            style={{ marginTop: "2rem" }}
           />
           {/* End Page Heading Section */}
           <Spacing lg="100" md="50" />
-          <Div>
-            <img src={post.image} alt={post.title} srcset="" />
+          <Div
+            style={{
+              width: "100%",
+              // border: "2px solid red",
+              textAlign: "center",
+            }}
+          >
+            <img src={post.image} alt={post.title} style={{ margin: "auto" }} />
           </Div>
           {/* Start Blog Details */}
-          <Spacing lg="150" md="80" />
+          <Spacing lg="100" md="50" />
           <Div className="container">
             <Div className="row">
               <Div className=" m-auto">
+                {/* <span className="italic">
+                  {post && (post.content.length / 1000).toFixed(0)} mins read
+                </span> */}
                 <Div className=" text-white  cs-blog-post cs-style2">
                   <div
                     className="p-3 max-w-2xl mx-auto w-full post-content"
@@ -97,7 +109,7 @@ export default function BlogDetailsPage() {
       <Div className="related_posts_grid">
         {relatedPost.map((item, index) => (
           <Div key={index}>
-            <PostStyle2
+            <RelatedPostStyle
               thumb={item.image}
               title={item.title}
               subtitle={item.subtitle}

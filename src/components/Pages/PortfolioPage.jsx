@@ -101,13 +101,29 @@ const categoryMenu = [
 
 export default function PortfolioPage() {
   pageTitle("Portfolio");
+  const [portfolio, setPortfolio] = useState([]);
   const [active, setActive] = useState("all");
   const [itemShow, setItemShow] = useState(7);
 
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    async function getPortfolio() {
+      // const res = await fetch("http://localhost:5173/api/post/getPosts");
 
+      const res = await fetch(
+        `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?category=portfolio`
+      );
+
+      const data = await res.json();
+
+      console.log(data.posts);
+      setPortfolio(data.posts);
+    }
+    getPortfolio();
+  }, []);
   return (
     <>
       {/* <PageHeading
@@ -139,29 +155,30 @@ export default function PortfolioPage() {
         </Div>
         <Spacing lg="90" md="45" />
         <Div className="row">
-          {portfolioData.slice(0, itemShow).map((item, index) => (
-            <Div
-              className={`${
-                index === 3 || index === 6 ? "col-lg-8" : "col-lg-4"
-              } ${
-                active === "all"
-                  ? ""
-                  : !(active === item.category)
-                  ? "d-none"
-                  : ""
-              }`}
-              key={index}
-            >
-              <Portfolio
-                title={item.title}
-                subtitle={item.subtitle}
-                href={item.href}
-                src={item.src}
-                variant="cs-style1 cs-type1"
-              />
-              <Spacing lg="25" md="25" />
-            </Div>
-          ))}
+          {portfolio &&
+            portfolio.slice(0, itemShow).map((item, index) => (
+              <Div
+                className={`${
+                  index === 3 || index === 6 ? "col-lg-8" : "col-lg-4"
+                } ${
+                  active === "all"
+                    ? ""
+                    : !(active === item.category)
+                    ? "d-none"
+                    : ""
+                }`}
+                key={index}
+              >
+                <Portfolio
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  href={item.slug}
+                  src={item.image}
+                  variant="cs-style1 cs-type1"
+                />
+                <Spacing lg="25" md="25" />
+              </Div>
+            ))}
         </Div>
 
         <Div className="text-center">
