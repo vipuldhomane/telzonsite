@@ -175,7 +175,7 @@ export default function PortfolioDetailsPage() {
         </>
       )}
       <Cta
-        title="agency@arino.com"
+        title="info@telzonmarketing.in"
         bgSrc="/images/cta_bg_2.jpeg"
         variant="rounded-0"
       />

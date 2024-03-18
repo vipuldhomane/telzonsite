@@ -76,20 +76,16 @@ export default function ContactPage() {
             <h3 className="cs-font_30 cs-m0 mt-5 cs-line_height_4 text-center">
               <a target="_blank" href="http://wa.me/+919307189776">
                 {/* <Icon icon="fa6-brands:whatsapp" /> 9307189776 */}
-                <Icon icon="logos:whatsapp-icon" className="mr-2" />
-                Chat with Us!
+                <Icon icon="logos:whatsapp-icon" className="mr-2" /> Chat with
+                Us!
               </a>
             </h3>
           </Div>
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
-      <Div className="cs-google_map">
-        {/* <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
-          allowFullScreen
-          title="Google Map"
-        /> */}
+      {/* <Div className="cs-google_map">
+
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.719311254112!2d79.07871837438876!3d21.083870085885156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae7e7485eff0aeaf%3A0x98d7c5152355b89!2sTelzon%20-%20Best%20digital%20marketing%20agency!5e0!3m2!1sen!2sin!4v1710317235806!5m2!1sen!2sin"
           width="600"
@@ -100,8 +96,8 @@ export default function ContactPage() {
           referrerpolicy="no-referrer-when-downgrade"
           title="Google Map"
         ></iframe>
-      </Div>
-      <Spacing lg="50" md="40" />
+      </Div> */}
+      {/* <Spacing lg="50" md="40" /> */}
     </>
   );
 }
