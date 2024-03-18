@@ -37,7 +37,8 @@ export default function AboutPage() {
       {/* Start Page Heading Section */}
       <PageHeading
         title="About Us"
-        bgSrc="images/about_hero_bg.jpeg"
+        // bgSrc="images/about_hero_bg.jpeg"
+        bgSrc="https://img.freepik.com/free-vector/vector-abstract-black-gold-luxury-background_361591-3874.jpg?t=st=1710744302~exp=1710747902~hmac=ad54fa2537752c512516336263a1f2fb8a9aab635c85338170999423125fcf60&w=826"
         pageLinkText="About Us"
       />
       {/* End Page Heading Section */}
@@ -166,8 +167,8 @@ export default function AboutPage() {
       <Div className="container">
         <Cta
           title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
-          btnLink="/contact"
+          btnText="Schedule a Meeting"
+          btnLink="http://wa.me/+919307189776"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>

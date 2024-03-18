@@ -21,12 +21,12 @@ import ServiceList from "../ServiceList";
 import Timeline from "../Timeline";
 const heroSocialLinks = [
   {
-    name: "Behance",
-    links: "/",
+    name: "Instagram",
+    links: "https://instagram.com/telzon.marketing?igshid=YzAwZjE1ZTI0Zg==",
   },
   {
-    name: "Twitter",
-    links: "/",
+    name: "YouTube",
+    links: "https://youtube.com/@telzon_marketing?si=-F5F-ZaYi8-jh0UB",
   },
 ];
 const funfaceData = [
@@ -142,34 +142,34 @@ const portfolioData = [
 ];
 const timelineData = [
   {
-    heading: "Digital Marketing",
-    name: "SubHeading",
-    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+    heading: "Team of Young Leaders",
+    // name: "SubHeading",
+    desc: "Our vibrant team brings fresh perspectives and innovative ideas, driving your marketing forward with youthful energy and cutting-edge strategies.",
   },
   {
-    heading: "Customised Marketing",
-    name: "SubHeading",
-    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+    heading: "Relatable Brand Marketing",
+    // name: "SubHeading",
+    desc: "We excel in creating campaigns where every audience can see themselves, ensuring your productor service resonates deeply with your customers.We excel in creating campaigns where every audience can see themselves, ensuring your product or service resonates deeply with your customers.",
   },
   {
-    heading: "Creative Solutions",
-    name: "SubHeading",
-    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+    heading: "Proven Track Record",
+    // name: "SubHeading",
+    desc: "With experience in successfully marketing over 100+ diverse brands, our portfolio speaks for our ability to deliver results across various industries",
   },
   {
-    heading: "Business Strategy",
-    name: "SubHeading",
-    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+    heading: "Creativity as Our USP",
+    // name: "SubHeading",
+    desc: "Our unique creative approach sets us apart, ensuring your brand stands out in the marketplace with memorable and impactful marketing.",
   },
   {
-    heading: "Business Growth",
-    name: "SubHeading",
-    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+    heading: "Trendsetters, Not Followers",
+    // name: "SubHeading",
+    desc: "We don't just keep up with trends, we create them. Our strategies are designed to position your brand as a leader, shaping the market's direction.",
   },
   {
-    heading: "Goal Oriented Strategy",
-    name: "SubHeading",
-    desc: "Expand your business to the world Expand your business to the world Expand your business to the world Expand your business to the world",
+    heading: "Efficient and Comprehensive Marketing",
+    // name: "SubHeading",
+    desc: "By using 20% of your budget, we aim to deliver 80% of the results, and offer both online and offline marketing solutions, ensuring high efficiency and comprehensive coverage",
   },
 ];
 
@@ -201,8 +201,8 @@ export default function DigitalAgencyHome() {
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
-        phoneNumber="+91 9898989898"
-        email="info@telzon.com"
+        phoneNumber="+91 9307189776"
+        email="info@telzonmarketing.in"
       />
       {/* End Hero Section */}
 
@@ -239,11 +239,14 @@ export default function DigitalAgencyHome() {
 
       <Spacing lg="120" md="50" />
       <Div className="container">
-        <h2 className="cs-font_50 cs-m0 cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat. (Some
-          catchy quote!!)
+        <h2 className="cs-font_50 cs-m0 cs-line_height_4 text-center">
+          Where Content Meets Creativity!
         </h2>
+        <h3 className="cs-font_20 cs-m0 cs-line_height_4 text-center mt-5">
+          At Telzon Marketing, we're masters at making your brand shine. We
+          create content that tells your story in a way that everyone remembers.
+          We're young, full of energy, and passionate about what we do.
+        </h3>
       </Div>
       <Spacing lg="90" md="70" />
       {/* End Services Section */}
@@ -399,7 +402,7 @@ export default function DigitalAgencyHome() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        <iframe
+        {/* <iframe
           width="560"
           height="315"
           src="https://www.youtube.com/embed/videoseries?si=tHkzkmqfdEpqJnwp&amp;list=PLE0Jo6NF_JYPjGRiOfj44iQ-XGomdEYMk"
@@ -417,7 +420,7 @@ export default function DigitalAgencyHome() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           cl
-        ></iframe>
+        ></iframe> */}
       </div>
       {/* End Testimonial Section */}
 
@@ -464,8 +467,8 @@ export default function DigitalAgencyHome() {
       <Div className="container">
         <Cta
           title="Let’s discuss & make <br />something <i>cool</i> together"
-          btnText="Call For Meeting"
-          btnLink="/contact"
+          btnText="Schedule a Meeting"
+          btnLink="http://wa.me/+919307189776"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>

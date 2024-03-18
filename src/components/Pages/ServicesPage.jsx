@@ -18,7 +18,8 @@ export default function ServicesPage() {
     <>
       <PageHeading
         title="Services"
-        bgSrc="images/service_hero_bg.jpeg"
+        // bgSrc="images/service_hero_bg.jpeg"
+        bgSrc="https://img.freepik.com/free-vector/vector-abstract-black-gold-luxury-background_361591-3874.jpg?t=st=1710744302~exp=1710747902~hmac=ad54fa2537752c512516336263a1f2fb8a9aab635c85338170999423125fcf60&w=826"
         pageLinkText="Services"
       />
       <Spacing lg="150" md="80" />
@@ -39,9 +40,9 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="UI/UX design"
+                    title="Social Media Marketing"
                     // link="/service/ui-ux-design"
-                    src="/images/service_1.jpeg"
+                    src="https://img.freepik.com/free-vector/marketing-concept-illustration_114360-7324.jpg?t=st=1710746779~exp=1710750379~hmac=e504bc49f24220a1434f6e8bbe54f33d37f814998c147fcbc651ea22eabea598&w=740"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -49,9 +50,9 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="React.js Development"
+                    title="Web Development"
                     // link="/service/reactjs-development"
-                    src="/images/service_2.jpeg"
+                    src="https://img.freepik.com/free-vector/operating-system-concept-illustration_114360-2195.jpg?t=st=1710746291~exp=1710749891~hmac=464e7af1fb185b0e0bfb3163259dd3eef9cef6fd7d1d85674de2984ead658656&w=740"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -60,7 +61,8 @@ export default function ServicesPage() {
                   <Card
                     title="Digital Marketing"
                     // link="/service/digital-marketing"
-                    src="/images/service_3.jpeg"
+                    // src="/images/service_3.jpeg"
+                    src="https://img.freepik.com/free-vector/digital-marketing-banner_157027-1376.jpg?t=st=1710745908~exp=1710749508~hmac=fd2a2296616f58ec0525ca324b069c80bade75f401f0b7069bd3601c915c1147&w=740"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -68,9 +70,9 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Technology"
+                    title="SEO"
                     // link="/service/technology"
-                    src="/images/service_4.jpeg"
+                    src="https://img.freepik.com/free-vector/seo-analytics-concept-illustration_114360-9862.jpg?t=st=1710746455~exp=1710750055~hmac=2d5911b464cde7a77aa41058f3bd21048951f80bdc0ed01021b0e3e87ba8dad0&w=740"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -79,9 +81,9 @@ export default function ServicesPage() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Consultancy"
+                    title="Photo Videography"
                     // link="/service/consultancy"
-                    src="/images/service_5.jpeg"
+                    src="https://img.freepik.com/free-vector/casting-call-abstract-concept-vector-illustration-open-call-models-commercial-shootings-photo-video-casting-modelling-agency-request-audition-brand-advertising-abstract-metaphor_335657-4165.jpg?t=st=1710746550~exp=1710750150~hmac=cf776d83fc3df82188384d48e878d1836d6daef351cb7e5311f46302aae7d438&w=740"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -91,7 +93,7 @@ export default function ServicesPage() {
                   <Card
                     title="Creative Design"
                     // link="/service/creative-design"
-                    src="/images/service_6.jpeg"
+                    src="https://img.freepik.com/free-vector/designer-life-concept-illustration_114360-1537.jpg?t=st=1710746601~exp=1710750201~hmac=8b5cf8c93e901f1698bfa60103f4d46a12c304dfc1c426979bed96cc11d207b6&w=740"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -116,8 +118,8 @@ export default function ServicesPage() {
       <Div className="container">
         <Cta
           title="Let’s discuss & make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
-          btnLink="/contact"
+          btnText="Schedule a Meeting"
+          btnLink="http://wa.me/+919307189776"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>

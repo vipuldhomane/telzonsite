@@ -11,17 +11,17 @@ export default function PricingTableList() {
       <Section className="row">
         <Section className="col-lg-4">
           <PricingTable
-            title="Standard"
+            title="Digital Marketing"
             price="29"
             currency="$"
             timeline="monthly"
             features={[
-              "Static responsive website",
-              "Video marketing",
-              "Keywords research",
-              "Facebook campaign",
-              "eCommerce solution",
-              "Google adword",
+              "PPC Marketing",
+              "Social Media Management",
+              "Search Engine Marketing (SEM)",
+              "Email Marketing",
+              "Content Marketing",
+              "Influencer Marketing",
             ]}
             btnText="Contact Now"
             btnLink="/"
@@ -30,17 +30,17 @@ export default function PricingTableList() {
         </Section>
         <Section className="col-lg-4">
           <PricingTable
-            title="Standard"
+            title="Web Development"
             price="29"
             currency="$"
             timeline="monthly"
             features={[
-              "Static responsive website",
-              "Video marketing",
-              "Keywords research",
-              "Facebook campaign",
-              "eCommerce solution",
-              "Google adword",
+              "Website Design and Development",
+              "Landing Pages",
+              "Full Stack Development",
+              "Search Engine Optimization (SEO)",
+              "Website Maintenance & Support",
+              "WordPress sites(?)",
             ]}
             btnText="Contact Now"
             btnLink="/"
@@ -49,74 +49,38 @@ export default function PricingTableList() {
         </Section>
         <Section className="col-lg-4">
           <PricingTable
-            title="Standard"
+            title="Social Media Marketing"
             price="29"
             currency="$"
             timeline="monthly"
             features={[
-              "Static responsive website",
-              "Video marketing",
-              "Keywords research",
               "Facebook campaign",
-              "eCommerce solution",
-              "Google adword",
+              "Instagram Advertising",
+              "Content Marketing",
+              "Influencer Marketing",
+              "Social Media Strategy",
+              "Social Media Advertising",
+              "Social Media Content Creation",
             ]}
             btnText="Contact Now"
             btnLink="/"
           />
           <Spacing lg="25" md="25" />
         </Section>
+
         <Section className="col-lg-4">
           <PricingTable
-            title="Standard"
+            title="Photo & Videography"
             price="29"
             currency="$"
             timeline="monthly"
             features={[
-              "Static responsive website",
-              "Video marketing",
-              "Keywords research",
-              "Facebook campaign",
-              "eCommerce solution",
-              "Google adword",
-            ]}
-            btnText="Contact Now"
-            btnLink="/"
-          />
-          <Spacing lg="25" md="25" />
-        </Section>
-        <Section className="col-lg-4">
-          <PricingTable
-            title="Standard"
-            price="29"
-            currency="$"
-            timeline="monthly"
-            features={[
-              "Static responsive website",
-              "Video marketing",
-              "Keywords research",
-              "Facebook campaign",
-              "eCommerce solution",
-              "Google adword",
-            ]}
-            btnText="Contact Now"
-            btnLink="/"
-          />
-          <Spacing lg="25" md="25" />
-        </Section>
-        <Section className="col-lg-4">
-          <PricingTable
-            title="Standard"
-            price="29"
-            currency="$"
-            timeline="monthly"
-            features={[
-              "Static responsive website",
-              "Video marketing",
-              "Keywords research",
-              "Facebook campaign",
-              "eCommerce solution",
-              "Google adword",
+              "Product Photography",
+              "Food Photography",
+              "Portrait Photography",
+              "Architectural Photography",
+              "Event Videography",
+              "Promotional Videos",
             ]}
             btnText="Contact Now"
             btnLink="/"

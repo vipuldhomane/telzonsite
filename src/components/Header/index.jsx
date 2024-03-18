@@ -177,19 +177,19 @@ export default function Header({ variant }) {
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">
-              Do you have a project in your <br /> mind? Keep connect us.
+              Do you have a project in your <br /> mind? Connect us!
             </h2>
           </Div>
           <Div className="cs-side_header_box">
             <ContactInfoWidget title="Contact Us" withIcon />
           </Div>
-          <Div className="cs-side_header_box">
+          {/* <Div className="cs-side_header_box">
             <Newsletter
               title="Subscribe"
-              subtitle="At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit."
-              placeholder="example@gmail.com"
+              subtitle="At Telzon Marketing, we're masters at making your brand shine. We create content that tells your story in a way that everyone remembers. We're young, full of energy, and passionate about what we do."
+              placeholder="info@telzonmarketing.in"
             />
-          </Div>
+          </Div> */}
           <Div className="cs-side_header_box">
             <SocialWidget />
           </Div>

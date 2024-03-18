@@ -2,33 +2,43 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Div from "../Div";
 import "./servicelist.scss";
+
 const serviceData = [
   {
     title: "Digital Marketing",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.",
-    imgUrl: "/images/service_7.jpeg",
+    subtitle: "Next-Level Digital Marketing for Next-Level Brands",
+    imgUrl:
+      "https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063170.jpg?t=st=1710740809~exp=1710744409~hmac=0309ff5dd79c576e5600e5751a66d13c631397173e3066081a5a794a2c707d61&w=360",
     href: "/service/service-details",
   },
   {
     title: "Web Development",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.",
-    imgUrl: "/images/service_8.jpeg",
+    subtitle: "Maximize Your Online Impact with Next-Gen Web Solutions",
+    imgUrl:
+      "https://img.freepik.com/free-photo/top-view-unrecognizable-hacker-performing-cyberattack-night_1098-18706.jpg?t=st=1710740511~exp=1710744111~hmac=cb2ef0965732fa92366fae8e44e90fc62f94630083159bf37f144b4b4be6c508&w=360",
     href: "/service/service-details",
   },
   {
-    title: "Branding",
-    subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.",
-    imgUrl: "/images/service_9.jpeg",
+    title: "Brand Building",
+    subtitle: "Crafting Unforgettable Brands for Forward-Thinking Businesses",
+    imgUrl:
+      "https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg?t=st=1710740669~exp=1710744269~hmac=930e2b02bc5e5942735167d77b33c89e6e6070688c675bd0a6956c853658b0d5&w=360",
     href: "/service/service-details",
   },
+  // {
+  //   title: "Graphics Design",
+  //   subtitle:
+  //     "Transform Your Vision into Stunning Designs with Expert Graphics",
+  //   imgUrl:
+  //     "https://img.freepik.com/free-photo/side-view-man-drawing-tablet_23-2150040134.jpg?t=st=1710740764~exp=1710744364~hmac=3005b693a14ce9ddd9147117f54aa171580ec214af2f07088a5f3ae52d0dd808&w=360",
+  //   href: "/service/service-details",
+  // },
   {
-    title: "Creative",
+    title: "Photo & Videography",
     subtitle:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.",
-    imgUrl: "/images/service_10.jpeg",
+      "Transform Your Vision into Stunning Designs with Expert Graphics",
+    imgUrl:
+      "https://img.freepik.com/free-photo/man-filming-with-professional-camera-new-movie_23-2149066401.jpg?t=st=1710743565~exp=1710747165~hmac=a09e1a773e7ebe367b0b834ce72e34fc4ce0d2fcf8cbda5a0f33f94ed39475ce&w=360",
     href: "/service/service-details",
   },
 ];
@@ -57,7 +67,7 @@ export default function ServiceList({ variant }) {
                   />
                 </Div>
               </Div>
-              {/* <span className="cs-iconbox_icon cs-center">
+              <span className="cs-iconbox_icon cs-center">
                 <svg
                   width={30}
                   height={29}
@@ -70,7 +80,7 @@ export default function ServiceList({ variant }) {
                     fill="currentColor"
                   />
                 </svg>
-              </span> */}
+              </span>
               <Div className="cs-iconbox_in">
                 <h2 className="cs-iconbox_title">{item.title}</h2>
                 <Div className="cs-iconbox_subtitle">{item.subtitle}</Div>

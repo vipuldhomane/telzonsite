@@ -16,7 +16,8 @@ export default function ContactPage() {
     <>
       <PageHeading
         title="Contact Us"
-        bgSrc="/images/contact_hero_bg.jpeg"
+        // bgSrc="/images/contact_hero_bg.jpeg"
+        bgSrc="https://img.freepik.com/free-vector/vector-abstract-black-gold-luxury-background_361591-3874.jpg?t=st=1710744302~exp=1710747902~hmac=ad54fa2537752c512516336263a1f2fb8a9aab635c85338170999423125fcf60&w=826"
         pageLinkText="Contact"
       />
       <Spacing lg="150" md="80" />
@@ -25,14 +26,14 @@ export default function ContactPage() {
           <Div className="col-lg-6">
             <SectionHeading
               title="Do you have a project <br/>in your mind?"
-              subtitle="Getting Touch"
+              subtitle="Contact us"
             />
             <Spacing lg="55" md="30" />
             <ContactInfoWidget withIcon />
             <Spacing lg="0" md="50" />
           </Div>
-          {/* <Div className="col-lg-6">
-            <form action="#" className="row">
+          <Div className="col-lg-6">
+            {/* <form action="#" className="row">
               <Div className="col-sm-6">
                 <label className="cs-primary_color">Full Name*</label>
                 <input type="text" className="cs-form_field" />
@@ -68,8 +69,18 @@ export default function ContactPage() {
                   <Icon icon="bi:arrow-right" />
                 </button>
               </Div>
-            </form>
-          </Div> */}
+            </form> */}
+            <h2 className="cs-font_50 cs-m0 mt-5 cs-line_height_4 text-center">
+              Contact us on WhatsApp
+            </h2>
+            <h3 className="cs-font_30 cs-m0 mt-5 cs-line_height_4 text-center">
+              <a target="_blank" href="http://wa.me/+919307189776">
+                {/* <Icon icon="fa6-brands:whatsapp" /> 9307189776 */}
+                <Icon icon="logos:whatsapp-icon" className="mr-2" />
+                Chat with Us!
+              </a>
+            </h3>
+          </Div>
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
