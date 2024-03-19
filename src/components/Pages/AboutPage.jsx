@@ -49,16 +49,13 @@ export default function AboutPage() {
         <Div className="row">
           <Div className="col-xl-5 col-lg-7">
             <SectionHeading
-              title="Your trusted partner for business"
+              title="Telzon: Beyond Marketing"
               subtitle="About Our Agency"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+                At Telzon, we're more than marketers; we're brand
+                architects.Let’s build your brand's legacy together.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -95,13 +92,13 @@ export default function AboutPage() {
       {/* End About Section */}
 
       {/* Start Fun Fact Section */}
-      <Div className="container">
+      {/* <Div className="container">
         <FunFact
           title="Our fun fact"
           subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
           data={funfaceData}
         />
-      </Div>
+      </Div> */}
       {/* End Fun Fact Section */}
 
       {/* Start Why Choose Section */}
@@ -112,7 +109,8 @@ export default function AboutPage() {
             <Div className="cs-image_layer cs-style1">
               <Div className="cs-image_layer_in">
                 <img
-                  src="/images/about_img_4.jpeg"
+                  // src="/images/about_img_4.jpeg"
+                  src="https://img.freepik.com/free-vector/polygonal-wireframe-business-strategy-composition-with-editable-text-images-columns-arrow-shining-particles_1284-32260.jpg?t=st=1710770131~exp=1710773731~hmac=d6db8307e43266cc852de378165504f2bb0a37fe2d29b81764909983340b8a2a&w=740"
                   alt="About"
                   className="w-100 cs-radius_15"
                 />
@@ -127,19 +125,19 @@ export default function AboutPage() {
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+                Partner with Telzon for a fusion of creativity and strategic
+                insight in marketing. Our team specializes in custom solutions,
+                driving brand growth with impactful, resonant campaigns. Trust
+                us to deliver innovative strategies that uplift your brand and
+                engage your audience meaningfully.
               </p>
-              <Spacing lg="15" md="15" />
+              {/* <Spacing lg="15" md="15" />
               <p className="cs-m0">
                 This is the main factor that sets us apart from our competition
                 and allows us to deliver a specialist business consultancy
                 service. Our team applies its wide-ranging experience to
                 determining.
-              </p>
+              </p> */}
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
               <Spacing lg="25" md="0" />

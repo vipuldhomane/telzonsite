@@ -79,12 +79,16 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
         <Div className="cs-bottom_footer">
           <Div className="cs-bottom_footer_left">
             <Div className="cs-copyright">
-              Copyright © {new Date().getFullYear()} TelZone Marketing
+              Copyright © {new Date().getFullYear()} TelZon Marketing
             </Div>
           </Div>
           <Div className="cs-bottom_footer_right">
             {/* <MenuWidget menuItems={copyrightLinks} variant=" cs-style2" /> */}
-            <a target="_blank" href="http://wa.me/+919307189776">
+            <a
+              target="_blank"
+              href="http://wa.me/+919307189776"
+              rel="noreferrer"
+            >
               +91 9307189776
             </a>
             {" | "}
