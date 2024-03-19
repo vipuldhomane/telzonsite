@@ -45,7 +45,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
             <Div className="col-lg-8 col-sm-6">
               <Div className="cs-footer_item ">
                 <TextWidget
-                  logoSrc="/images/footer_logo.svg"
+                  logoSrc="images/main/telzonlogo.png"
                   logoAlt="Logo"
                   text="At Telzon Marketing, we're masters at making your brand shine. We create content that tells your story in a way that everyone remembers. We're young, full of energy, and passionate about what we do.
 "
