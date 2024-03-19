@@ -40,6 +40,7 @@
   row-gap: 10px;
   justify-items: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
+  grid-auto-flow: dense;
 }
 
 /* Desktop screens */
@@ -77,7 +78,7 @@
 // Start of Values  Section
 .values-container {
   display: grid;
-  width: 90%;
+  // width: 90%;
   gap: 20px;
   row-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
@@ -89,6 +90,7 @@
   .values-container {
     grid-template-columns: repeat(1, 1fr); /* One item per row */
     text-align: center;
+    padding: 1rem;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
