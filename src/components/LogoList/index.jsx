@@ -11,15 +11,15 @@ const partnerLogos = [
     alt: "Partner",
   },
   {
-    src: "/images/partner_3.svg",
+    src: "/images/clientLogos/hardeo.png",
     alt: "Partner",
   },
   {
-    src: "/images/partner_4.svg",
+    src: "/images/clientLogos/kamakshi.png",
     alt: "Partner",
   },
   {
-    src: "/images/partner_5.svg",
+    src: "/images/clientLogos/charminar.png",
     alt: "Partner",
   },
 ];
@@ -28,7 +28,11 @@ export default function LogoList() {
   return (
     <Div className="cs-partner_logo_wrap">
       {partnerLogos.map((partnerLogo, index) => (
-        <div className="cs-partner_logo" key={index}>
+        <div
+          className="cs-partner_logo"
+          key={index}
+          style={{ display: "flex", flexWrap: "wrap" }}
+        >
           <img
             src={partnerLogo.src}
             alt={partnerLogo.alt}

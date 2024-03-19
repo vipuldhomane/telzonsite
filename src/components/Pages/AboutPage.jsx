@@ -64,7 +64,8 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5 offset-xl-2">
             <img
-              src="/images/about_img_1.jpeg"
+              // src="/images/about_img_1.jpeg"
+              src="/images/main/about/marketing01.webp"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -72,7 +73,8 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-7">
             <img
-              src="/images/about_img_2.jpeg"
+              // src="images/about_img_2.jpeg"
+              src="/images/main/about/marketing04.webp"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -80,7 +82,8 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5">
             <img
-              src="/images/about_img_3.jpeg"
+              // src="/images/about_img_3.jpeg"
+              src="/images/main/about/marketing03.webp"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -110,7 +113,8 @@ export default function AboutPage() {
               <Div className="cs-image_layer_in">
                 <img
                   // src="/images/about_img_4.jpeg"
-                  src="https://img.freepik.com/free-vector/polygonal-wireframe-business-strategy-composition-with-editable-text-images-columns-arrow-shining-particles_1284-32260.jpg?t=st=1710770131~exp=1710773731~hmac=d6db8307e43266cc852de378165504f2bb0a37fe2d29b81764909983340b8a2a&w=740"
+                  src="/images/main/about/marketing02.webp"
+                  // src="https://img.freepik.com/free-vector/polygonal-wireframe-business-strategy-composition-with-editable-text-images-columns-arrow-shining-particles_1284-32260.jpg?t=st=1710770131~exp=1710773731~hmac=d6db8307e43266cc852de378165504f2bb0a37fe2d29b81764909983340b8a2a&w=740"
                   alt="About"
                   className="w-100 cs-radius_15"
                 />
