@@ -386,17 +386,16 @@ export default function DigitalAgencyHome() {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/videoseries?si=Sy3CIbA3StnMcV29&amp;list=PLA_tb393dqDeOinVj1dMTpkguOTz8nv5y"
+          src="https://www.youtube.com/embed/videoseries?si=IPV_ek3DpbB-VC9_&amp;list=PL8Dn9GZ0GOee3ynqmRiLgX7ugG63cioXX"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-          cl
         ></iframe>
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/videoseries?si=UVRuiU2SnAo9_9ik&amp;list=PLE0Jo6NF_JYOMvJNqn7jrWEwWn_WjZlKV"
+          src="https://www.youtube.com/embed/videoseries?si=GiIqaKGrYydfbALt&amp;list=PL8Dn9GZ0GOeegN32Kp1RzQ5PmFTGH_XMo"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

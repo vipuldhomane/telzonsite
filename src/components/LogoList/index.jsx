@@ -3,11 +3,11 @@ import Div from "../Div";
 import "./logolist.scss";
 const partnerLogos = [
   {
-    src: "/images/clientLogos/creata.png",
+    src: "/images/clientLogos/LM.png",
     alt: "Partner",
   },
   {
-    src: "/images/clientLogos/flyingPoultry.png",
+    src: "/images/clientLogos/flyingpoultry.png",
     alt: "Partner",
   },
   {
@@ -19,7 +19,7 @@ const partnerLogos = [
     alt: "Partner",
   },
   {
-    src: "/images/clientLogos/charminar.png",
+    src: "/images/clientLogos/chaarminaar.png",
     alt: "Partner",
   },
 ];
