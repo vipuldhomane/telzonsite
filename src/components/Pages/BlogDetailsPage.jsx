@@ -10,6 +10,7 @@ import Spacing from "../Spacing";
 import PostStyle2 from "../Post/PostStyle2.jsx";
 import SectionHeading from "../SectionHeading/index.jsx";
 import RelatedPostStyle from "../Post/relatedPostStyle.jsx";
+import { domain } from "../../hostDomainHelper.js";
 
 export default function BlogDetailsPage() {
   const [post, setPost] = useState({});
@@ -28,7 +29,7 @@ export default function BlogDetailsPage() {
     async function getBlog() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       const res = await fetch(
-        `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?slug=${params.blogDetailsId}`
+        `${domain}/api/post/getposts?slug=${params.blogDetailsId}`
       );
 
       const data = await res.json();
@@ -41,9 +42,7 @@ export default function BlogDetailsPage() {
   useEffect(() => {
     async function getRelatedBlogs() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
-      const res = await fetch(
-        "https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=3"
-      );
+      const res = await fetch(`${domain}/api/post/getposts?limit=3`);
 
       const data = await res.json();
       console.log(data.posts);

@@ -8,6 +8,7 @@ import Portfolio from "../Portfolio";
 import Div from "../Div";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
+import { domain } from "../../hostDomainHelper";
 const portfolioData = [
   {
     title: "Colorful Art Work",
@@ -100,7 +101,9 @@ const categoryMenu = [
 ];
 
 export default function PortfolioPage() {
-  pageTitle("Portfolio");
+  pageTitle(
+    "Digital Marketing Case Studies | Telzon Marketing - Pune & Nagpur"
+  );
   const [portfolio, setPortfolio] = useState([]);
   const [active, setActive] = useState("all");
   const [itemShow, setItemShow] = useState(7);
@@ -113,9 +116,7 @@ export default function PortfolioPage() {
     async function getPortfolio() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
 
-      const res = await fetch(
-        `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?category=portfolio`
-      );
+      const res = await fetch(`${domain}/api/post/getposts?category=portfolio`);
 
       const data = await res.json();
 

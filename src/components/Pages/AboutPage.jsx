@@ -7,6 +7,7 @@ import Div from "../Div";
 import SectionHeading from "../SectionHeading";
 import TeamSlider from "../Slider/TeamSlider";
 import Spacing from "../Spacing";
+import Team from "../Team";
 const funfaceData = [
   {
     title: "Global Happy Clients",
@@ -25,10 +26,45 @@ const funfaceData = [
     factNumber: "550",
   },
 ];
+const teamData = [
+  {
+    memberImage: "/images/main/team/himanshu.jpg",
+    memberName: "Himanshu Golar",
+    memberDesignation: "Photo Video Production",
+    // memberSocial: {
+    //   linkedin: '/',
+    //   twitter: '/',
+    //   youtube: '/',
+    //   facebook: '/',
+    // },
+  },
+  {
+    memberImage: "/images/main/team/himanshu.jpg",
+    memberName: "Himanshu Golar",
+    memberDesignation: "Photo Video Production",
+    // memberSocial: {
+    //   linkedin: '/',
+    //   twitter: '/',
+    //   youtube: '/',
+    //   facebook: '/',
+    // },
+  },
+];
 
 export default function AboutPage() {
-  pageTitle("About");
+  pageTitle(
+    "About Telzon Marketing | Your Trusted Digital Partner - Pune & Nagpur"
+  );
+  useEffect(() => {
+    // Update meta description dynamically
 
+    document
+      .querySelector('meta[name="description"]')
+      .setAttribute(
+        "content",
+        "Hire Telzon Marketing for top-notch digital marketing services for small businesses in Nagpur. We help you achieve your online marketing goals with customized strategies."
+      );
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -161,6 +197,18 @@ export default function AboutPage() {
         />
         <Spacing lg="85" md="45" />
         <TeamSlider />
+        {/* <Div className="container">
+          {teamData.map((item, index) => (
+            <Div key={index}>
+              <Team
+                memberImage={item.memberImage}
+                memberName={item.memberName}
+                memberDesignation={item.memberDesignation}
+                // memberSocial={item.memberSocial}
+              />
+            </Div>
+          ))}
+        </Div> */}
       </Div>
       {/* End Team Section */}
 

@@ -17,9 +17,6 @@ import ShowcasePortfolioHome from "./components/Pages/ShowcasePortfolioHome";
 import CaseStudyShowcaseHome from "./components/Pages/CaseStudyShowcaseHome";
 import Layout from "./components/Layout";
 import CaseStudyDetailsPage from "./components/Pages/CaseStudyDetailsPage";
-import FaqPage from "./components/Pages/FaqPage";
-
-import VideoShowcaseHome from "./components/Pages/VideoShowcaseHome";
 
 function App() {
   return (
@@ -30,10 +27,10 @@ function App() {
 
           <Route path="about" element={<AboutPage />} />
           <Route path="service" element={<ServicesPage />} />
-          <Route
+          {/* <Route
             path="service/:serviceDetailsId"
             element={<ServiceDetailsPage />}
-          />
+          /> */}
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route
             path="portfolio/:portfolioDetailsId"
@@ -42,32 +39,14 @@ function App() {
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:blogDetailsId" element={<BlogDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="team" element={<TeamPage />} />
+          {/* <Route path="team" element={<TeamPage />} /> */}
           {/* <Route path="team/:teamDetails" element={<TeamDetails />} /> */}
           <Route
             path="/case-study/:caseStudyDetailsId"
             element={<CaseStudyDetailsPage />}
           />
-          {/* <Route path="faq" element={<FaqPage />} /> */}
         </Route>
-        {/* <Route
-          path="/"
-          element={<Layout headerVariant="cs-site_header_full_width" />}
-        >
-          <Route
-            path="creative-portfolio"
-            element={<CreativePortfolioHome />}
-          />
-          <Route
-            path="showcase-portfolio"
-            element={<ShowcasePortfolioHome />}
-          />
-          <Route
-            path="case-study-showcase"
-            element={<CaseStudyShowcaseHome />}
-          />
-          <Route path="video-showcase" element={<VideoShowcaseHome />} />
-        </Route> */}
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

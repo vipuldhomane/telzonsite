@@ -25,16 +25,9 @@ const serviceData = [
       "https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg?t=st=1710740669~exp=1710744269~hmac=930e2b02bc5e5942735167d77b33c89e6e6070688c675bd0a6956c853658b0d5&w=360",
     href: "/service/service-details",
   },
-  // {
-  //   title: "Graphics Design",
-  //   subtitle:
-  //     "Transform Your Vision into Stunning Designs with Expert Graphics",
-  //   imgUrl:
-  //     "https://img.freepik.com/free-photo/side-view-man-drawing-tablet_23-2150040134.jpg?t=st=1710740764~exp=1710744364~hmac=3005b693a14ce9ddd9147117f54aa171580ec214af2f07088a5f3ae52d0dd808&w=360",
-  //   href: "/service/service-details",
-  // },
+
   {
-    title: "Photo & Videography",
+    title: "Photo & Video Production",
     subtitle:
       "Transform Your Vision into Stunning Designs with Expert Graphics",
     imgUrl:

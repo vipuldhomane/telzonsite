@@ -8,7 +8,9 @@ import Spacing from "../Spacing";
 import ContactInfoWidget from "../Widget/ContactInfoWidget";
 
 export default function ContactPage() {
-  pageTitle("Contact Us");
+  pageTitle(
+    "Contact Telzon Marketing | Digital Marketing Experts - Pune & Nagpur"
+  );
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

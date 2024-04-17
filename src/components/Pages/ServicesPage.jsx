@@ -10,7 +10,9 @@ import TestimonialSlider from "../Slider/TestimonialSlider";
 import Spacing from "../Spacing";
 
 export default function ServicesPage() {
-  pageTitle("Service");
+  pageTitle(
+    "Expert Digital Marketing Services | Telzon Marketing - Pune & Nagpur"
+  );
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -63,7 +65,7 @@ export default function ServicesPage() {
                     // link="/service/digital-marketing"
                     // src="/images/service_3.jpeg"
                     src="https://img.freepik.com/free-vector/digital-marketing-banner_157027-1376.jpg?t=st=1710745908~exp=1710749508~hmac=fd2a2296616f58ec0525ca324b069c80bade75f401f0b7069bd3601c915c1147&w=740"
-                    alt="Service"
+                    alt="Digital Marketing Services by Telzon Marketing"
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
@@ -73,7 +75,7 @@ export default function ServicesPage() {
                     title="SEO"
                     // link="/service/technology"
                     src="https://img.freepik.com/free-vector/seo-analytics-concept-illustration_114360-9862.jpg?t=st=1710746455~exp=1710750055~hmac=2d5911b464cde7a77aa41058f3bd21048951f80bdc0ed01021b0e3e87ba8dad0&w=740"
-                    alt="Service"
+                    alt="SEO Training and Workshops by Telzon Marketing"
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
@@ -94,7 +96,7 @@ export default function ServicesPage() {
                     title="Creative Design"
                     // link="/service/creative-design"
                     src="https://img.freepik.com/free-vector/designer-life-concept-illustration_114360-1537.jpg?t=st=1710746601~exp=1710750201~hmac=8b5cf8c93e901f1698bfa60103f4d46a12c304dfc1c426979bed96cc11d207b6&w=740"
-                    alt="Service"
+                    alt="Content Marketing Services from Telzon Marketing"
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
@@ -111,6 +113,14 @@ export default function ServicesPage() {
         />
         <Spacing lg="85" md="40" />
         <PricingTableList />
+        <Div style={{ border: "2px solid red" }}>
+          <h1>Digital Marketing Agency in Nagpur</h1>
+          <h2>Best Digital Marketing Course in Nagpur</h2>
+          <h3>Social Media Marketing Services</h3>
+          <h3>Search Engine Optimization (SEO) Services</h3>
+          <h3>Content Marketing Services</h3>
+          <h3>Web Design and Development Services</h3>
+        </Div>
       </Div>
       <Spacing lg="125" md="55" />
       {/* <TestimonialSlider />

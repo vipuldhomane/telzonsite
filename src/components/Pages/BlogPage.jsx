@@ -10,6 +10,7 @@ import Spacing from "../Spacing";
 import SectionHeading from "../SectionHeading/index.jsx";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import { domain } from "../../hostDomainHelper.js";
 
 const postData = [
   {
@@ -47,7 +48,9 @@ const postData = [
 export default function BlogPage() {
   const [posts, setPosts] = useState([]);
   const [pageNo, setPageNo] = useState(0);
-  pageTitle("Blog");
+  pageTitle(
+    "Telzon Marketing Blog | Latest Digital Marketing Trends - Pune & Nagpur"
+  );
 
   useEffect(() => {
     // window.scrollTo(0, 0);
@@ -60,20 +63,16 @@ export default function BlogPage() {
       let data;
       if (pageNo !== 0) {
         const res = await fetch(
-          `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?startIndex=${
-            pageNo * 6
-          }?limit=6?`
+          `${domain}/api/post/getposts?startIndex=${pageNo * 6}?limit=6?`
         );
 
         data = await res.json();
       } else {
-        const res = await fetch(
-          `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?limit=6`
-        );
+        const res = await fetch(`${domain}/api/post/getposts?limit=6`);
 
         data = await res.json();
       }
-      console.log(data.posts);
+      // console.log(data.posts);
       setPosts(data.posts);
     }
     getBlogs();

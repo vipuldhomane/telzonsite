@@ -7,7 +7,7 @@ const partnerLogos = [
     alt: "Partner",
   },
   {
-    src: "/images/clientLogos/flyingpoultry.png",
+    src: "/images/clientLogos/fp.png",
     alt: "Partner",
   },
   {
@@ -22,6 +22,10 @@ const partnerLogos = [
     src: "/images/clientLogos/chaarminaar.png",
     alt: "Partner",
   },
+  {
+    src: "/images/clientLogos/taywade.png",
+    alt: "Partner",
+  },
 ];
 
 export default function LogoList() {
@@ -31,12 +35,12 @@ export default function LogoList() {
         <div
           className="cs-partner_logo"
           key={index}
-          style={{ display: "flex", flexWrap: "wrap" }}
+          // style={{ display: "flex", flexWrap: "wrap" }}
         >
           <img
             src={partnerLogo.src}
             alt={partnerLogo.alt}
-            style={{ height: "4rem" }}
+            // style={{ height: "4rem" }}
           />
         </div>
       ))}

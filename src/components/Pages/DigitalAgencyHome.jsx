@@ -19,6 +19,7 @@ import HomeServices from "./HomeServices";
 import { Link } from "react-router-dom";
 import ServiceList from "../ServiceList";
 import Timeline from "../Timeline";
+import { domain } from "../../hostDomainHelper";
 const heroSocialLinks = [
   {
     name: "Instagram",
@@ -50,29 +51,29 @@ const funfaceData = [
 const serviceData1 = [
   {
     title: "Web Development",
-    href: "/service/service-details",
+    // href: "/service/service-details",
   },
   {
     title: "Marketing",
-    href: "/service/service-details",
+    // href: "/service/service-details",
   },
   {
     title: "Branding",
-    href: "/service/service-details",
+    // href: "/service/service-details",
   },
 ];
 const serviceData2 = [
   {
     title: "SEO",
-    href: "/service/service-details",
+    // href: "/service/service-details",
   },
   {
     title: "Creatives",
-    href: "/service/service-details",
+    // href: "/service/service-details",
   },
   {
-    title: "Photo Videography",
-    href: "/service/service-details",
+    title: "Photo Video Production",
+    // href: "/service/service-details",
   },
 ];
 const portfolioData = [
@@ -175,17 +176,27 @@ const timelineData = [
 
 export default function DigitalAgencyHome() {
   const [itemShow, setItemShow] = useState(6);
-  pageTitle("TelZon Marketing");
+  pageTitle(
+    "Leading Digital Marketing Agency | Telzon Marketing - Nagpur & Pune"
+  );
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
+  useEffect(() => {
+    // Update meta description dynamically
+
+    document
+      .querySelector('meta[name="description"]')
+      .setAttribute(
+        "content",
+        "Telzon Marketing is a leading digital marketing agency in Nagpur, offering a wide range of services including SEO, social media marketing, content marketing, and web design and development"
+      );
+  }, []);
 
   // start the development server on render
   useEffect(() => {
     async function startServer() {
-      const res = await fetch(
-        "https://mern-blog-main-ds4m.onrender.com/api/user/test"
-      );
+      const res = await fetch(`${domain}/api/user/test`);
       const data = await res.json();
       console.log(data);
     }
@@ -205,16 +216,6 @@ export default function DigitalAgencyHome() {
         email="info@telzonmarketing.in"
       />
       {/* End Hero Section */}
-
-      {/* Start Funfact Section */}
-      {/* <Div className="container">
-        <FunFact2
-          data={funfaceData}
-          variant="cs-type1"
-          bgUrl="/images/funfact_shape_bg.svg"
-        />
-      </Div> */}
-      {/* End Funfact Section */}
 
       {/* Start Services Section */}
 
@@ -250,86 +251,6 @@ export default function DigitalAgencyHome() {
       </Div>
       <Spacing lg="90" md="70" />
       {/* End Services Section */}
-
-      {/* Start About Section */}
-      {/* <Div className="cs-shape_wrap_4">
-        <Div className="cs-shape_4"></Div>
-        <Div className="cs-shape_4"></Div>
-        <Spacing lg="150" md="80" />
-        <Div className="container">
-          <Div className="row">
-            <Div className="col-lg-5 col-xl-4">
-              <SectionHeading
-                title="India’s best digital agency "
-                subtitle="Why Choose Us"
-                btnText="Learn More"
-                btnLink="/about"
-              />
-              <Spacing lg="45" md="45" />
-            </Div>
-            <Div className="col-lg-7 offset-xl-1">
-              <Div className="cs-half_screen">
-                <VideoModal
-                  videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
-                  bgUrl="/images/video_bg.jpeg"
-                  variant="cs-style1 cs-size1"
-                />
-              </Div>
-            </Div>
-          </Div>
-        </Div>
-      </Div> */}
-      {/* End About Section */}
-
-      {/* Start Projects Section */}
-      {/* <Spacing lg="145" md="80" />
-      <Div className="container">
-        <SectionHeading
-          title="Portfolio to explore"
-          subtitle="Latest Projects"
-          variant="cs-style1 text-center"
-        />
-        <Spacing lg="90" md="45" />
-        <Div className="row">
-          {portfolioData.slice(0, itemShow).map((item, index) => (
-            <Div
-              className={`${
-                index === 0 || index === 3 || index === 4
-                  ? "col-lg-8"
-                  : "col-lg-4"
-              }`}
-              key={index}
-            >
-              <Portfolio
-                title={item.title}
-                subtitle={item.subtitle}
-                href={item.href}
-                src={item.src}
-                variant="cs-style1 cs-type1"
-              />
-              <Spacing lg="25" md="25" />
-            </Div>
-          ))}
-        </Div>
-
-        <Div className="text-center">
-          {portfolioData.length <= itemShow ? (
-            ""
-          ) : (
-            <>
-              <Spacing lg="65" md="40" />
-              <span
-                className="cs-text_btn"
-                onClick={() => setItemShow(itemShow + 3)}
-              >
-                <span>Load More</span>
-                <Icon icon="bi:arrow-right" />
-              </span>
-            </>
-          )}
-        </Div>
-      </Div> */}
-      {/* End Projects Section */}
 
       {/* Start Awards Section */}
 
@@ -401,25 +322,6 @@ export default function DigitalAgencyHome() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        {/* <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/videoseries?si=tHkzkmqfdEpqJnwp&amp;list=PLE0Jo6NF_JYPjGRiOfj44iQ-XGomdEYMk"
-          title="YouTube video player"
-          frameborder="1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/videoseries?si=Sy3CIbA3StnMcV29&amp;list=PLA_tb393dqDeOinVj1dMTpkguOTz8nv5y"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          cl
-        ></iframe> */}
       </div>
       {/* End Testimonial Section */}
 

@@ -7,6 +7,7 @@ import PageHeading from "../PageHeading";
 import Div from "../Div";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
+import { domain } from "../../hostDomainHelper";
 
 export default function PortfolioDetailsPage() {
   const params = useParams();
@@ -21,7 +22,7 @@ export default function PortfolioDetailsPage() {
       // const res = await fetch("http://localhost:5173/api/post/getPosts");
       console.log(params);
       const res = await fetch(
-        `https://mern-blog-main-ds4m.onrender.com/api/post/getposts?slug=${params.portfolioDetailsId}`
+        `${domain}/api/post/getposts?slug=${params.portfolioDetailsId}`
       );
 
       const data = await res.json();

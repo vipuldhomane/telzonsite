@@ -40,7 +40,6 @@ export default function PricingTableList() {
               "Full Stack Development",
               "Search Engine Optimization (SEO)",
               "Website Maintenance & Support",
-              "WordPress sites(?)",
             ]}
             btnText="Contact Now"
             btnLink="/"
@@ -70,7 +69,7 @@ export default function PricingTableList() {
 
         <Section className="col-lg-4">
           <PricingTable
-            title="Photo & Videography"
+            title="Photo Video Production"
             price="29"
             currency="$"
             timeline="monthly"

@@ -15,7 +15,10 @@ export default function Hero4({
   return (
     <Div
       className="cs-hero cs-style1 cs-type1 text-center cs-fixed_bg"
-      style={{ backgroundImage: "url(./images/hero_bg_2.jpeg)" }}
+      style={{
+        backgroundImage: "url(./images/hero_bg_2.jpeg)",
+        backgroundAlt: "Digital Marketing Services by Telzon Marketing",
+      }}
       // style={{
       //   backgroundImage:
       //     "url(https://cdn.logojoy.com/wp-content/uploads/20220901112146/airbnb-brand-guidelines-1-2048x1152.gif)",
