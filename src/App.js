@@ -17,6 +17,8 @@ import ShowcasePortfolioHome from "./components/Pages/ShowcasePortfolioHome";
 import CaseStudyShowcaseHome from "./components/Pages/CaseStudyShowcaseHome";
 import Layout from "./components/Layout";
 import CaseStudyDetailsPage from "./components/Pages/CaseStudyDetailsPage";
+import Landing from "./components/Landing-page/Landing";
+
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<DigitalAgencyHome />} />
+          
+          <Route path="/landing/:city" element={<Landing />} />
 
           <Route path="about" element={<AboutPage />} />
           <Route path="service" element={<ServicesPage />} />
@@ -36,6 +40,7 @@ function App() {
             path="portfolio/:portfolioDetailsId"
             element={<PortfolioDetailsPage />}
           />
+          
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:blogDetailsId" element={<BlogDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
