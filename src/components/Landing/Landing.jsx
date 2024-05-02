@@ -177,7 +177,7 @@ const [scroll, setScroll] = useState(0);
                 title="Services we can help you with"
                 subtitle="What Can We Do"
                 btnText="See All Services"
-                btnLink="/service"
+                // btnLink="/service"
               />
               <Spacing lg="90" md="45" />
             </Div>
@@ -187,7 +187,7 @@ const [scroll, setScroll] = useState(0);
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="UI/UX design"
-                    link="/service/service-details"
+                    // link="/service/service-details"
                     src="/images/service_1.jpeg"
                     alt="Service"
                   />
@@ -197,7 +197,7 @@ const [scroll, setScroll] = useState(0);
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="React.js Development"
-                    link="/service/service-details"
+                    // link="/service/service-details"
                     src="/images/service_2.jpeg"
                     alt="Service"
                   />
@@ -206,7 +206,7 @@ const [scroll, setScroll] = useState(0);
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Digital Marketing"
-                    link="/service/service-details"
+                    // link="/service/service-details"
                     src="/images/service_3.jpeg"
                     alt="Service"
                   />
@@ -216,7 +216,7 @@ const [scroll, setScroll] = useState(0);
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="Technology"
-                    link="/service/service-details"
+                    // link="/service/service-details"
                     src="/images/service_4.jpeg"
                     alt="Service"
                   />
