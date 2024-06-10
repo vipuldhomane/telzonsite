@@ -1,63 +1,63 @@
-import React, { useEffect } from 'react';
-import CaseStudy from '../CaseStudy';
-import Cta from '../Cta';
-import Div from '../Div';
-import Hero3 from '../Hero/Hero3';
-import LogoList from '../LogoList';
-import MovingText from '../MovingText';
-import Portfolio2 from '../Portfolio/Portfolio2';
-import Portfolio3 from '../Portfolio/Portfolio3';
-import SectionHeading from '../SectionHeading';
-import TestimonialSlider from '../Slider/TestimonialSlider';
-import Spacing from '../Spacing';
-import { pageTitle } from '../../helper';
+import React, { useEffect } from "react";
+import CaseStudy from "../CaseStudy";
+import Cta from "../Cta";
+import Div from "../Div";
+import Hero3 from "../Hero/Hero3";
+import LogoList from "../LogoList";
+import MovingText from "../MovingText";
+import Portfolio2 from "../Portfolio/Portfolio2";
+import Portfolio3 from "../Portfolio/Portfolio3";
+import SectionHeading from "../SectionHeading";
+import TestimonialSlider from "../Slider/TestimonialSlider";
+import Spacing from "../Spacing";
+import { pageTitle } from "../../helper";
 const heroSocialLinks = [
   {
-    name: 'Behance',
-    links: '/',
+    name: "Behance",
+    links: "/",
   },
   {
-    name: 'Twitter',
-    links: '/',
+    name: "Twitter",
+    links: "/",
   },
 ];
 const portfolioData = [
   {
-    title: 'Winery eCommerce website design & development',
-    subtitle: 'Project 01',
-    btnText: 'See Details',
-    btnLink: '/portfolio/portfolio-details',
-    imageUrl: '/images/portfolio_35.jpeg',
-    category: 'Web Development',
+    title: "Winery eCommerce website design & development",
+    subtitle: "Project 01",
+    btnText: "See Details",
+    btnLink: "/portfolio/portfolio-details",
+    imageUrl: "/images/portfolio_35.jpeg",
+    category: "Web Development",
   },
   {
-    title: 'Euro corporate agency for healthy environment',
-    subtitle: 'Project 02',
-    btnText: 'See Details',
-    btnLink: '/portfolio/portfolio-details',
-    imageUrl: '/images/portfolio_36.jpeg',
-    category: 'Branding',
+    title: "Euro corporate agency for healthy environment",
+    subtitle: "Project 02",
+    btnText: "See Details",
+    btnLink: "/portfolio/portfolio-details",
+    imageUrl: "/images/portfolio_36.jpeg",
+    category: "Branding",
   },
   {
-    title: 'Powerful admin dashboard design',
-    subtitle: 'Project 03',
-    btnText: 'See Details',
-    btnLink: '/portfolio/portfolio-details',
-    imageUrl: '/images/portfolio_37.jpeg',
-    category: 'UI Design',
+    title: "Powerful admin dashboard design",
+    subtitle: "Project 03",
+    btnText: "See Details",
+    btnLink: "/portfolio/portfolio-details",
+    imageUrl: "/images/portfolio_37.jpeg",
+    category: "UI Design",
   },
   {
-    title: 'Crypto financial trading apps for hedge fund',
-    subtitle: 'Project 04',
-    btnText: 'See Details',
-    btnLink: '/portfolio/portfolio-details',
-    imageUrl: '/images/portfolio_38.jpeg',
-    category: 'Apps Design',
+    title: "Crypto financial trading apps for hedge fund",
+    subtitle: "Project 04",
+    btnText: "See Details",
+    btnLink: "/portfolio/portfolio-details",
+    imageUrl: "/images/portfolio_38.jpeg",
+    category: "Apps Design",
   },
 ];
 
 export default function CreativePortfolioHome() {
-  pageTitle('Creative Portfolio');
+  pageTitle("Creative Portfolio");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -102,7 +102,7 @@ export default function CreativePortfolioHome() {
             />
             <Spacing lg="100" md="70" />
           </Div>
-        ),
+        )
       )}
       {/* End Portfolio Section */}
 

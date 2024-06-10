@@ -113,14 +113,14 @@ export default function ServicesPage() {
         />
         <Spacing lg="85" md="40" />
         <PricingTableList />
-        <Div style={{ border: "2px solid red" }}>
+        {/* <Div style={{ border: "2px solid red" }}>
           <h1>Digital Marketing Agency in Nagpur</h1>
           <h2>Best Digital Marketing Course in Nagpur</h2>
           <h3>Social Media Marketing Services</h3>
           <h3>Search Engine Optimization (SEO) Services</h3>
           <h3>Content Marketing Services</h3>
           <h3>Web Design and Development Services</h3>
-        </Div>
+        </Div> */}
       </Div>
       <Spacing lg="125" md="55" />
       {/* <TestimonialSlider />

@@ -11,39 +11,7 @@ import SectionHeading from "../SectionHeading/index.jsx";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { domain } from "../../hostDomainHelper.js";
-
-const postData = [
-  {
-    thumb: "/images/post_4.jpeg",
-    title: "A.I will take all human job within next year",
-    subtitle:
-      "Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.",
-    date: "07 Mar 2022",
-    category: "Tech",
-    categoryHref: "/blog",
-    href: "/blog/blog-details",
-  },
-  {
-    thumb: "/images/post_5.jpeg",
-    title: "Creative studio programm coming soon",
-    subtitle:
-      "Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.",
-    date: "05 Mar 2022",
-    category: "Photography",
-    categoryHref: "/blog",
-    href: "/blog/blog-details",
-  },
-  {
-    thumb: "/images/post_6.jpeg",
-    title: "Artistic mind will be great for creation",
-    subtitle:
-      "Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.",
-    date: "04 Mar 2022",
-    category: "Tech",
-    categoryHref: "/blog",
-    href: "/blog/blog-details",
-  },
-];
+import { blogs } from "./blogs.js";
 
 export default function BlogPage() {
   const [posts, setPosts] = useState([]);
@@ -54,6 +22,7 @@ export default function BlogPage() {
 
   useEffect(() => {
     // window.scrollTo(0, 0);
+    setPosts(blogs);
   }, []);
 
   useEffect(() => {
@@ -73,13 +42,19 @@ export default function BlogPage() {
         data = await res.json();
       }
       // console.log(data.posts);
-      setPosts(data.posts);
+      // setPosts(data.posts);
+      // setPosts((prevPosts) => [...prevPosts, ...data.posts]);
+      setPosts((prevPosts) => {
+        const existingIds = new Set(prevPosts.map((post) => post.id));
+        const newPosts = data.posts.filter((post) => !existingIds.has(post.id));
+        return [...prevPosts, ...newPosts];
+      });
     }
     getBlogs();
   }, [pageNo]);
 
   function handlePageIncrease() {
-    if (pageNo * 6 < postData.length) setPageNo(pageNo + 1);
+    if (pageNo * 6 < posts.length) setPageNo(pageNo + 1);
     // console.log(pageNo);
   }
   function handlePageReduce() {
